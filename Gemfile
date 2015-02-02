@@ -12,6 +12,7 @@ gem 'pg'
 
 gem 'rspec-rails', :group => :test
 gem 'marc'
+gem 'rack-cors', :require => 'rack/cors'
 
 group :development do
   gem "better_errors"
