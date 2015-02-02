@@ -5,12 +5,12 @@ class Book < ActiveRecord::Base
 
   def add_subject(subject)
     update_attributes subject_array: subject_array + [ subject ]
-    subject = Subject.find_by(name: subject)
-    if subject
-      BookSubject.create(book_id: self.id, subject_id: subject.id)
+    new_subject = Subject.find_by(name: subject)
+    if new_subject
+      BookSubject.create(book_id: self.id, subject_id: new_subject.id)
     else
-      subject = Subject.create(name: subject)
-      BookSubject.create(book_id: self.id, subject_id: subject.id)
+      new_subject = Subject.create(name: subject)
+      BookSubject.create(book_id: self.id, subject_id: new_subject.id)
     end
   end
 

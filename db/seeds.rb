@@ -66,20 +66,22 @@ for record in reader
 
     if record['650']['v']
       book.add_subject(record['650']['v'])
+
     end
 
     if record['650']['x']
-      # book.subjects_array.push(record['650']['x'])
       book.add_subject(record['650']['x'])
+
     end
 
     if record['650']['y']
-      # book.subjects_array.push(record['650']['y'])
       book.add_subject(record['650']['y'])
+
     end
 
     if record['650']['z']
       book.add_subject(record['650']['z'])
+
     end
   end
 
@@ -87,6 +89,7 @@ for record in reader
   if record['651']
     if record['651']['a']
       book.add_subject(record['651']['a'])
+
     end
   end
 
@@ -94,6 +97,7 @@ for record in reader
   if record['655']
     if record['655']['a']
       book.add_subject(record['655']['a'])
+
     end
   end
 
@@ -127,5 +131,7 @@ for record in reader
   # Number of pages
 
   book.save
+
+
 
 end
