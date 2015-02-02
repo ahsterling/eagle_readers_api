@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 describe BooksController do
-  let(:book) {Book.create(title: "The Great Gatsby")}
+  let(:book) {Book.create(title: "The Great Gatsby", author: "Fitzgerald, F. Scott")}
 
   describe 'GET #index' do
     it 'is successful' do
@@ -24,8 +24,14 @@ describe BooksController do
 
   describe 'GET #search' do
     it 'is successful' do
-      get :search, title: 'stars'
+      get :search, title: 'The Great Gatsby'
       expect(response.status).to eq 200
+    end
+
+    it 'can search on title' do
+      new_book = Book.create(title: "Feed", author: "Anderson, M. T.")
+      get :search, title: "Feed"
+      expect(assigns(:books)).to eq [new_book]
     end
 
   end
