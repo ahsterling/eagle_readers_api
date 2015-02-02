@@ -11,10 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150130213700) do
+ActiveRecord::Schema.define(version: 20150202190334) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "book_subjects", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "book_id"
+    t.integer  "subject_id"
+  end
 
   create_table "books", force: :cascade do |t|
     t.string   "title"
@@ -26,6 +33,12 @@ ActiveRecord::Schema.define(version: 20150130213700) do
     t.string   "subject_array", default: [],              array: true
     t.datetime "created_at",                 null: false
     t.datetime "updated_at",                 null: false
+  end
+
+  create_table "subjects", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

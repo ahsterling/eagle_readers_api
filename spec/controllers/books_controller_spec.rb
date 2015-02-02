@@ -58,6 +58,14 @@ describe BooksController do
       expect(assigns(:books)).to eq [book5]
     end
 
+    context 'subjects' do
+      it 'can search on particular subjects' do
+        book6 = Book.create(title: "Volcanoes", author: "Smith, Mary", subject_array: ['Volcanoes', 'Saint Helens, Mount (Wash.)'])
+        get :search, subject: "Volcanoes"
+        expect(assigns(:books)).to eq [book6]
+      end
+    end
+
   end
 
 end
