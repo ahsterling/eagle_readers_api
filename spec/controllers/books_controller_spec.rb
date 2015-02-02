@@ -28,10 +28,34 @@ describe BooksController do
       expect(response.status).to eq 200
     end
 
-    it 'can search on title' do
+    it 'can search on exact title' do
       new_book = Book.create(title: "Feed", author: "Anderson, M. T.")
       get :search, title: "Feed"
       expect(assigns(:books)).to eq [new_book]
+    end
+
+    it 'can search on exact author' do
+      book2 = Book.create(title: "Feed", author: "Anderson, M. T.")
+      get :search, author: "Anderson, M. T."
+      expect(assigns(:books)).to eq [book2]
+    end
+
+    it 'can search on title and author' do
+      book3 = Book.create(title: "The title", author: "Author, the")
+      get :search, title: "The title", author: "Author, the"
+      expect(assigns(:books)).to eq [book3]
+    end
+
+    it 'can perform fuzzy search on title' do
+      book4 = Book.create(title: "The Fault in Our Stars", author: "Green, John")
+      get :search, title: "faul"
+      expect(assigns(:books)).to eq [book4]
+    end
+
+    it 'can perform fuzzy search on author' do
+      book5 = Book.create(title: "Everyday", author: "Levithan, David")
+      get :search, author: "levit"
+      expect(assigns(:books)).to eq [book5]
     end
 
   end
