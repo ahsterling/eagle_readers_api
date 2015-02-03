@@ -1,6 +1,9 @@
 class Book < ActiveRecord::Base
   has_many :book_subjects
   has_many :subjects, through: :book_subjects
+
+  has_many :user_books
+  has_many :users, through: :user_books
   validates :title, presence: true
 
   def add_subject(subject)
