@@ -8,7 +8,8 @@ Rails.application.routes.draw do
   get "/subjects", to: "subjects#index", as: :subjects
 
   get "/users/:id", to: "users#show", as: :user
-  get "/users/:id/books", to: "users#books"
+  get "/users/:user_id/books", to: "users#books"
+  post "/users/:user_id/books/new", to: "users#add_book"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

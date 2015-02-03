@@ -6,9 +6,14 @@ class UsersController < ApplicationController
   end
 
   def books
-    user = User.find(params[:id])
+    user = User.find(params[:user_id])
     @books = user.books
     render json: @books.as_json
+  end
+
+  def add_book
+    UserBook.create(user_id: params[:user_id], book_id: params[:book_id])
+    
   end
 
 end
