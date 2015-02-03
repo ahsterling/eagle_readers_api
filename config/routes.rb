@@ -9,6 +9,9 @@ Rails.application.routes.draw do
 
   get "/users/:id", to: "users#show", as: :user
   get "/users/:user_id/books", to: "users#books"
+
+  get "/users/:user_id/badges", to: "users#badges"
+
   post "/users/:user_id/books/new", to: "users#add_book"
 
   get "/genre_badges", to: "genre_badges#index", as: :genre_badges

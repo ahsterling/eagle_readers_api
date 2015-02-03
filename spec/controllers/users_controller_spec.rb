@@ -19,6 +19,16 @@ describe UsersController do
     end
   end
 
+  describe 'GET #badges' do
+    it 'assigns @badges to a particular users badges' do
+      user = User.create(email: 'email@email.com')
+      genre_badge = GenreBadge.create(genre_name: "Mystery")
+      UserGenreBadge.create(user_id: user.id, genre_badge_id: genre_badge.id)
+      get :badges, user_id: user.id
+      expect(assigns(:badges)).to eq [genre_badge]
+    end
+  end
+
   describe 'POST #add_book' do
 
 

@@ -11,6 +11,12 @@ class UsersController < ApplicationController
     render json: @books.as_json
   end
 
+  def badges
+    user = User.find(params[:user_id])
+    @badges = user.genre_badges
+    render json: @badges.as_json
+  end
+
   def add_book
     UserBook.create(user_id: params[:user_id], book_id: params[:book_id])
     user = User.find(params[:user_id])
