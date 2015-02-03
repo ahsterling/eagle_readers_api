@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   post "/users/:user_id/books/new", to: "users#add_book"
 
   get "/genre_badges", to: "genre_badges#index", as: :genre_badges
+  get "/genre_badges/:id", to: "genre_badges#show", as: :genre_badge
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

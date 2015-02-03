@@ -21,4 +21,12 @@ describe GenreBadgesController do
       expect(genre_badges).to match_array(["Mystery"])
     end
   end
+
+  describe 'GET #show' do
+    it 'is successful' do
+      genre_badge = GenreBadge.create(genre_name: "Mystery")
+      get :show, id: genre_badge.id
+      expect(response.status).to eq 200
+    end
+  end
 end
