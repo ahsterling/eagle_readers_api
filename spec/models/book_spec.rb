@@ -21,4 +21,15 @@ RSpec.describe Book, :type => :model do
     end
   end
 
+  describe 'has many users' do
+    it 'allows you to call book.users' do
+      book = Book.create(title: "Blah")
+      user = User.create(email: "a@b.com")
+      user2 = User.create(email: "b@c.com")
+      UserBook.create(book_id: book.id, user_id: user.id)
+      UserBook.create(book_id: book.id, user_id: user2.id)
+      expect(book.users.count).to eq 2
+    end
+  end
+
 end
