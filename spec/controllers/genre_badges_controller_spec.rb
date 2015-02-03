@@ -28,5 +28,11 @@ describe GenreBadgesController do
       get :show, id: genre_badge.id
       expect(response.status).to eq 200
     end
+
+    it 'assigns @genre_badge to the correct badge' do
+      genre_badge = GenreBadge.create(genre_name: "Mystery")
+      get :show, id: genre_badge.id
+      expect(assigns(:genre_badge)).to eq genre_badge
+    end
   end
 end
