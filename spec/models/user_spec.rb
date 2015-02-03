@@ -8,11 +8,17 @@ describe User do
   end
 
   describe 'associations' do
+    let(:user) {User.create(email: 'a@b.com')}
+    let(:book) {Book.create(title: "Blah")}
+    let(:genre_badge) {GenreBadge.create(genre_name: "Fiction")}
     it 'a user can have many books' do
-      user = User.create(email: 'a@b.com')
-      book = Book.create(title: "Blah")
       UserBook.create(user_id: user.id, book_id: book.id)
       expect(user.books.count).to eq 1
+    end
+
+    it 'a user can have many genre_badges' do
+      UserGenreBadge.create(user_id: user.id, genre_badge_id: genre_badge.id)
+      expect(user.genre_badges.count).to eq 1
     end
   end
 end
