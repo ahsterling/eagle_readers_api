@@ -21,4 +21,18 @@ describe User do
       expect(user.genre_badges.count).to eq 1
     end
   end
+
+  describe '#has_genre_badge?(genre_name)' do
+    let(:user) { User.create(email: "a@b.com") }
+    let(:book) { Book.create(title: "Blah") }
+    let(:subject) { Subject.create(name: "Mystery")}
+    let(:genre_badge) { GenreBadge.create(genre_name: "Mystery") }
+
+    it 'returns true if a user has books of the correct genre' do
+      book.subjects << subject
+      # User adds book
+      UserBook.create(user_id: user.id, book_id: book.id)
+      expect(user.has_genre_badge?("Mystery")).to eq true
+    end
+  end
 end
