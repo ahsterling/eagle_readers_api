@@ -38,6 +38,7 @@ describe UsersController do
         book = Book.create(title: "Blah")
         subject = Subject.create(name: "Fantasy")
         genre_badge = GenreBadge.create(genre_name: "Fantasy")
+        genre_badge2 = GenreBadge.create(genre_name: "Graphic Novel")
 
         book.subjects << subject
 

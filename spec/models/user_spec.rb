@@ -27,12 +27,17 @@ describe User do
     let(:book) { Book.create(title: "Blah") }
     let(:subject) { Subject.create(name: "Mystery")}
     let(:genre_badge) { GenreBadge.create(genre_name: "Mystery") }
+    let(:genre_badge2) { GenreBadge.create(genre_name: "History")}
 
     it 'returns true if a user has books of the correct genre' do
       book.subjects << subject
       # User adds book
       UserBook.create(user_id: user.id, book_id: book.id)
       expect(user.has_genre_badge?("Mystery")).to eq true
+    end
+
+    it 'returns false if a user does not have books of the correct genre' do
+      expect(user.has_genre_badge?("History")).to eq false
     end
   end
 end
