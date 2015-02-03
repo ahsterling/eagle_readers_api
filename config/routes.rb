@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   get "/books/:id", to: "books#show", as: :book
 
   get "/subjects", to: "subjects#index", as: :subjects
+
+  get "/users/:id", to: "users#show", as: :user
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
