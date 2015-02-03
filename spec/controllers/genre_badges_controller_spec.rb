@@ -12,5 +12,13 @@ describe GenreBadgesController do
       get :index
       expect(assigns(:genre_badges)).to match_array [genre_badge]
     end
+
+    it 'retruns json of the data' do
+      genre_badge = GenreBadge.create(genre_name: "Mystery")
+      get :index
+      body = JSON.parse(response.body)
+      genre_badges = body.map { |b| b['genre_name'] }
+      expect(genre_badges).to match_array(["Mystery"])
+    end
   end
 end
