@@ -7,6 +7,7 @@ class User < ActiveRecord::Base
 
   def has_genre_badge?(genre_name)
     has_badge = false
+
     self.books.includes(:subjects).each do |book|
       book.subjects.each do |subject|
         if subject.name == genre_name
@@ -14,7 +15,16 @@ class User < ActiveRecord::Base
         end
       end
     end
+
     return has_badge
+  end
+
+  def already_has_badge(genre_name)
+    if self.genre_badges.where(genre_name: genre_name).length != 0
+      return true
+    else
+      return false
+    end
   end
 
 end

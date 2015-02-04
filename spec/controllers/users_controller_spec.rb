@@ -55,6 +55,20 @@ describe UsersController do
         post :add_book, book_id: book.id, user_id: user.id
         expect(User.find(user.id).genre_badges.count).to eq 1
       end
+
+      it 'doesnt create another badge when user has already earned it' do
+        user = User.create(email: "email@email.com")
+        book = Book.create(title: "Blah")
+        book2 = Book.create(title: "Another book")
+        subject = Subject.create(name: "Fantasy")
+        genre_badge = GenreBadge.create(genre_name: "Fantasy")
+        book.subjects << subject
+        book2.subjects << subject
+        UserGenreBadge.create(user_id: user.id, genre_badge_id: genre_badge.id)
+
+        post :add_book, book_id: book2.id, user_id: user.id
+        expect(User.find(user.id).genre_badges.count).to eq 1
+      end
     end
   end
 end
