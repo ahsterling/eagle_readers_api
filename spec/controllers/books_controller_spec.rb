@@ -1,7 +1,9 @@
 require 'rails_helper'
 
 describe BooksController do
-  let(:book) {Book.create(title: "The Great Gatsby", author: "Fitzgerald, F. Scott")}
+  let(:genre) {Genre.create(name: "fiction")}
+
+  let(:book) {Book.create(title: "The Great Gatsby", author: "Fitzgerald, F. Scott", genre_id: genre.id)}
 
   describe 'GET #index' do
     it 'is successful' do
@@ -17,6 +19,7 @@ describe BooksController do
 
   describe 'GET #show' do
     it 'is successful' do
+
       get :show, id: book.id
       expect(response.status).to eq 200
     end

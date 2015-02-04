@@ -8,15 +8,23 @@ class User < ActiveRecord::Base
   def has_genre_badge?(genre_name)
     has_badge = false
 
-    self.books.includes(:subjects).each do |book|
-      book.subjects.each do |subject|
-        if subject.name == genre_name
-          has_badge = true
-        end
+    self.books.each do |book|
+      if book.genre.name == genre_name
+        has_badge = true
       end
     end
 
     return has_badge
+
+    # self.books.includes(:subjects).each do |book|
+    #   book.subjects.each do |subject|
+    #     if subject.name == genre_name
+    #       has_badge = true
+    #     end
+    #   end
+    # end
+    #
+    # return has_badge
   end
 
   def already_has_badge(genre_name)

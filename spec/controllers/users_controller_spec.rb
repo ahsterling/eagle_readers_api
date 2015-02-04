@@ -34,7 +34,8 @@ describe UsersController do
 
     it 'adds a book to a users shelf' do
       user = User.create(email: "email@email.com")
-      book = Book.create(title: "Blah")
+      genre = Genre.create(name: "Fiction")
+      book = Book.create(title: "Blah", genre_id: genre.id)
       subject = Subject.create(name: "Fantasy")
       genre_badge = GenreBadge.create(genre_name: "Fantasy")
 
@@ -45,9 +46,10 @@ describe UsersController do
     context 'user earning badge' do
       it 'creates appropriate user_genre_badge when user adds book' do
         user = User.create(email: "email@email.com")
-        book = Book.create(title: "Blah")
+        genre = Genre.create(name: "Fiction")
+        book = Book.create(title: "Blah", genre_id: genre.id)
         subject = Subject.create(name: "Fantasy")
-        genre_badge = GenreBadge.create(genre_name: "Fantasy")
+        genre_badge = GenreBadge.create(genre_name: "Fiction")
         genre_badge2 = GenreBadge.create(genre_name: "Graphic Novel")
 
         book.subjects << subject
@@ -58,8 +60,9 @@ describe UsersController do
 
       it 'doesnt create another badge when user has already earned it' do
         user = User.create(email: "email@email.com")
-        book = Book.create(title: "Blah")
-        book2 = Book.create(title: "Another book")
+        genre = Genre.create(name: "Fiction")
+        book = Book.create(title: "Blah", genre_id: genre.id)
+        book2 = Book.create(title: "Another book", genre_id: genre.id)
         subject = Subject.create(name: "Fantasy")
         genre_badge = GenreBadge.create(genre_name: "Fantasy")
         book.subjects << subject
