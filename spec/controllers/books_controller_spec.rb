@@ -70,4 +70,16 @@ describe BooksController do
 
   end
 
+  describe 'GET #subjects' do
+    it 'can retrieve a list of a books subjects' do
+      book = Book.create(title: "Blah")
+      subject1 = Subject.create(name: "Dogs")
+      subject2 = Subject.create(name: "Cats")
+      BookSubject.create(book_id: book.id, subject_id: subject1.id)
+      BookSubject.create(book_id: book.id, subject_id: subject2.id)
+      get :subjects, id: book.id
+      expect(assigns(:book_subjects)).to eq [subject1, subject2]
+    end
+  end
+
 end

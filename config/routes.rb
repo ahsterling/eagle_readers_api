@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get "/books/search", to: "books#search"
 
   get "/books/:id", to: "books#show", as: :book
+  get "/books/:id/subjects", to: "books#subjects"
 
   get "/subjects", to: "subjects#index", as: :subjects
 

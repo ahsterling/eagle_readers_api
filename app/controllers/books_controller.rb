@@ -9,6 +9,12 @@ class BooksController < ApplicationController
     render json: @book.as_json
   end
 
+  def subjects
+    book = Book.find(params[:id])
+    @book_subjects = book.subjects
+    render json: @book_subjects.as_json
+  end
+
   def search
     if params['title'] && params['author']
       @books = Book.where("title ILIKE ? AND author ILIKE ?", "%#{params['title']}%", "%#{params['author']}%")
