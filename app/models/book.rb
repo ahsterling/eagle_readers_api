@@ -9,6 +9,29 @@ class Book < ActiveRecord::Base
   validates :title, presence: true
 
   def add_subject(subject)
+
+
+    #fantasy
+    # if /fantasy/i.match(subject)
+    #   subject = Subject.find_by(name: "fantasy")
+    # end
+
+    #science fiction
+    # if /science fic/i.match(subject)
+    #   subject = Subject.find_by(name: "science fiction")
+    # end
+
+    #historical fiction
+    # if /historical fiction/i.match(subject)
+    #   subject = Subject.find_by(name: "historical fiction")
+    #mystery/suspense
+    #adventure
+    #horror/occult
+    #political fiction
+    #epistolary
+    #steampunk
+    #paranormal
+    #fiction
     update_attributes subject_array: subject_array + [ subject ]
     new_subject = Subject.find_by(name: subject)
     if new_subject
