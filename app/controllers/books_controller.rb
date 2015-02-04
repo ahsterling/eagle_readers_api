@@ -1,12 +1,24 @@
 class BooksController < ApplicationController
   def index
     @books = Book.all
+
     render json: @books.as_json
   end
 
   def show
-    @book = Book.find(params[:id])
-    render json: @book.as_json
+    book = Book.find(params[:id])
+    render json: {
+      id: book.id,
+      title: book.title,
+      author: book.author,
+      description: book.description,
+      pub_date: book.pub_date,
+      pages: book.pages,
+      isbn: book.isbn,
+      subject_array: book.subjects.map {|sub| sub.name},
+      loc_number: book.loc_number,
+      genre: book.genre.name
+    }.as_json
   end
 
   def subjects
