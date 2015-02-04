@@ -34,9 +34,9 @@ class BooksController < ApplicationController
       @books = Book.where("title ILIKE ?", "%#{params['title']}%")
     elsif params['author']
       @books = Book.where("author ILIKE ?", "%#{params['author']}%")
-    elsif params['subject']
+    elsif params['genre']
       # @books = Book.where("'#{params['subject']}' = ANY (subject_array)")
-      @books = Subject.find_by("name ILIKE ?", "#{params['subject']}").books
+      @books = Genre.find_by("name ILIKE ?", "#{params['genre']}").books
     end
     render json: @books.as_json
   end

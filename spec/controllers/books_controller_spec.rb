@@ -63,10 +63,10 @@ describe BooksController do
 
     context 'subjects' do
       it 'can search on particular subjects' do
-        book6 = Book.create(title: "Volcanoes", author: "Smith, Mary")
-        subject = Subject.create(name: "volcanoes")
-        BookSubject.create(book_id: book6.id, subject_id: subject.id)
-        get :search, subject: "Volcanoes"
+        genre = Genre.create(name: "fiction")
+
+        book6 = Book.create(title: "Volcanoes", author: "Smith, Mary", genre_id: genre.id )
+        get :search, genre: "fiction"
         expect(assigns(:books)).to eq [book6]
       end
     end
