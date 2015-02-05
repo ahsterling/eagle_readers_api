@@ -6,11 +6,14 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-genres = ["fantasy", "science fiction", "historical fiction", "mystery", "horror", "adventure", "fiction", "animals", "poetry", "graphic novel", "biography", "non-fiction/other"]
+genres = ["fantasy", "science fiction", "historical fiction", "mystery", "horror", "adventure", "fiction", "animals", "poetry", "graphic novel", "biography", "history", "mythology", "sports", "non-fiction/other"]
 
 genres.each do |genre|
   Genre.create(name: genre)
+  GenreBadge.create(genre_name: genre)
 end
+
+User.create(email: 'a@a.com')
 
 reader = MARC::Reader.new("erin_books_2.dat")
 
@@ -42,7 +45,10 @@ for record in reader
   # publication date
   if record['260']
     if record['260']['c']
-      book.pub_date = record['260']['c']
+      # puts record['260']['c']
+      date_match = /\d+/.match(record['260']['c']).to_s
+      date = Date.new(date_match.to_i)
+      book.pub_date = date
     end
   end
 
@@ -105,37 +111,45 @@ for record in reader
     end
   end
 
+  book.save
+
   # ["fantasy", "science fiction", "historical fiction", "mystery", "horror", "adventure", "paranormal", "fiction", "political fiction", "animals", "poetry", "graphic novel", "biography", "non-fiction"]
-  if book.subject_array == []
-    book.genre_id = Genre.find_by(name: 'non-fiction/other')
-  else
-    book.subject_array.each do |sub_name|
-      if /fantasy/i.match(sub_name) || /fantastical/i.match(sub_name)
-        book.genre_id = Genre.find_by(name: "fantasy").id
-      elsif /science fic/i.match(sub_name)
-        book.genre_id = Genre.find_by(name: "science fiction").id
-      elsif /historical f/i.match(sub_name)
-        book.genre_id = Genre.find_by(name: "historical fiction").id
-      elsif /mystery/i.match(sub_name) || /suspense/i.match(sub_name)
-        book.genre_id = Genre.find_by(name: "mystery").id
-      elsif /horror/i.match(sub_name) || /occult/i.match(sub_name) || /paranormal/i.match(sub_name)
-        book.genre_id = Genre.find_by(name: "horror").id
-      elsif /adventure/i.match(sub_name)
-        book.genre_id = Genre.find_by(name: "adventure").id
-      elsif /animal/i.match(sub_name)
-        book.genre_id = Genre.find_by(name: "animals").id
-      elsif /poetry/i.match(sub_name)
-        book.genre_id = Genre.find_by(name: "poetry").id
-      elsif /comic/i.match(sub_name) || /graphic n/i.match(sub_name)
-        book.genre_id = Genre.find_by(name: "graphic novel").id
-      elsif /biography/i.match(sub_name)
-        book.genre_id = Genre.find_by(name: "biography").id
-      elsif /fiction/i.match(sub_name) || /literature/i.match(sub_name)
-        book.genre_id = Genre.find_by(name: "fiction").id
-      else
-        book.genre_id = Genre.find_by(name: "non-fiction/other").id
-      end
+  # if book.subject_array.count == 0
+  #   book.genre_id = Genre.find_by(name: 'non-fiction/other')
+  # else
+  book.subject_array.each do |sub_name|
+    if /fantasy/i.match(sub_name) || /fantastical/i.match(sub_name)
+      book.genre_id = Genre.find_by(name: "fantasy").id
+    elsif /science fic/i.match(sub_name)
+      book.genre_id = Genre.find_by(name: "science fiction").id
+    elsif /historical f/i.match(sub_name)
+      book.genre_id = Genre.find_by(name: "historical fiction").id
+    elsif /mystery/i.match(sub_name) || /suspense/i.match(sub_name)
+      book.genre_id = Genre.find_by(name: "mystery").id
+    elsif /horror/i.match(sub_name) || /occult/i.match(sub_name) || /paranormal/i.match(sub_name)
+      book.genre_id = Genre.find_by(name: "horror").id
+    elsif /adventure/i.match(sub_name)
+      book.genre_id = Genre.find_by(name: "adventure").id
+    elsif /animal/i.match(sub_name)
+      book.genre_id = Genre.find_by(name: "animals").id
+    elsif /poetry/i.match(sub_name)
+      book.genre_id = Genre.find_by(name: "poetry").id
+    elsif /comic/i.match(sub_name) || /graphic n/i.match(sub_name)
+      book.genre_id = Genre.find_by(name: "graphic novel").id
+    elsif /biography/i.match(sub_name)
+      book.genre_id = Genre.find_by(name: "biography").id
+    elsif /history/i.match(sub_name)
+      book.genre_id = Genre.find_by(name: "history").id
+    elsif /mythology/i.match(sub_name)
+      book.genre_id = Genre.find_by(name: "mythology").id
+    elsif /sports/i.match(sub_name)
+      book.genre_id = Genre.find_by(name: "sports").id
+    elsif /fiction/i.match(sub_name) || /literature/i.match(sub_name)
+      book.genre_id = Genre.find_by(name: "fiction").id
+    else
+      book.genre_id = Genre.find_by(name: "non-fiction/other").id
     end
+    # end
   end
 
 

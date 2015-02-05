@@ -48,11 +48,11 @@ describe UsersController do
         user = User.create(email: "email@email.com")
         genre = Genre.create(name: "Fiction")
         book = Book.create(title: "Blah", genre_id: genre.id)
-        subject = Subject.create(name: "Fantasy")
+        # subject = Subject.create(name: "Fantasy")
         genre_badge = GenreBadge.create(genre_name: "Fiction")
         genre_badge2 = GenreBadge.create(genre_name: "Graphic Novel")
 
-        book.subjects << subject
+        # book.subjects << subject
 
         post :add_book, book_id: book.id, user_id: user.id
         expect(User.find(user.id).genre_badges.count).to eq 1

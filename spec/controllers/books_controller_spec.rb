@@ -62,7 +62,7 @@ describe BooksController do
     end
 
     context 'subjects' do
-      it 'can search on particular subjects' do
+      it 'can search on particular genres' do
         genre = Genre.create(name: "fiction")
 
         book6 = Book.create(title: "Volcanoes", author: "Smith, Mary", genre_id: genre.id )
