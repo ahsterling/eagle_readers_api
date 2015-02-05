@@ -117,6 +117,7 @@ for record in reader
   # if book.subject_array.count == 0
   #   book.genre_id = Genre.find_by(name: 'non-fiction/other')
   # else
+  puts book.subject_array
   book.subject_array.each do |sub_name|
     if /fantasy/i.match(sub_name) || /fantastical/i.match(sub_name)
       book.genre_id = Genre.find_by(name: "fantasy").id
