@@ -19,6 +19,8 @@ Rails.application.routes.draw do
   get "/genre_badges", to: "genre_badges#index", as: :genre_badges
   get "/genre_badges/:id", to: "genre_badges#show", as: :genre_badge
 
+  root to: "books#home"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
