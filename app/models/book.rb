@@ -4,9 +4,13 @@ class Book < ActiveRecord::Base
 
   has_many :user_books
   has_many :users, through: :user_books
+
+  belongs_to :genre
   validates :title, presence: true
 
   def add_subject(subject)
+
+
     update_attributes subject_array: subject_array + [ subject ]
     new_subject = Subject.find_by(name: subject)
     if new_subject
