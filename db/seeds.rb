@@ -6,7 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-genres = ["fantasy", "science fiction", "historical fiction", "mystery", "horror", "adventure", "fiction", "animals", "poetry", "graphic novel", "biography", "history", "mythology", "sports", "non-fiction/other"]
+genres = ["music", "fantasy", "science fiction", "historical fiction", "mystery", "horror", "adventure", "fiction", "animals", "poetry", "graphic novel", "biography", "history", "mythology/folktales", "sports", "science", "non-fiction/other"]
 
 genres.each do |genre|
   Genre.create(name: genre)
@@ -117,57 +117,46 @@ for record in reader
   # if book.subject_array.count == 0
   #   book.genre_id = Genre.find_by(name: 'non-fiction/other')
   # else
-  puts book.subject_array
-  book.subject_array.each do |sub_name|
-    if /fantasy/i.match(sub_name) || /fantastical/i.match(sub_name)
+  if book.subjects.count == 0
+    book.genre_id = Genre.find_by(name: "non-fiction/other")
+  else
+    if book.subject_array.grep(/fantasy/i).count > 0 || book.subject_array.grep(/fantastical/i).count > 0
       book.genre_id = Genre.find_by(name: "fantasy").id
-    elsif /science fic/i.match(sub_name)
-      book.genre_id = Genre.find_by(name: "science fiction").id
-    elsif /historical f/i.match(sub_name)
+    elsif book.subject_array.grep(/science fic/).count > 0
+      book.genre_id = Genre.find_by(name: "science fiction")
+    elsif book.subject_array.grep(/historical f/i).count > 0
       book.genre_id = Genre.find_by(name: "historical fiction").id
-    elsif /mystery/i.match(sub_name) || /suspense/i.match(sub_name)
+    elsif book.subject_array.grep(/mystery/i).count > 0 || book.subject_array.grep(/suspense/i).count > 0
       book.genre_id = Genre.find_by(name: "mystery").id
-    elsif /horror/i.match(sub_name) || /occult/i.match(sub_name) || /paranormal/i.match(sub_name)
+    elsif book.subject_array.grep(/horror/i).count > 0 || book.subject_array.grep(/occult/i).count > 0 || book.subject_array.grep(/paranormal/i).count > 0
       book.genre_id = Genre.find_by(name: "horror").id
-    elsif /adventure/i.match(sub_name)
+    elsif book.subject_array.grep(/adventure/i).count > 0
       book.genre_id = Genre.find_by(name: "adventure").id
-    elsif /animal/i.match(sub_name)
+    elsif book.subject_array.grep(/animal/i).count > 0
       book.genre_id = Genre.find_by(name: "animals").id
-    elsif /poetry/i.match(sub_name)
+    elsif book.subject_array.grep(/poetry/i).count > 0
       book.genre_id = Genre.find_by(name: "poetry").id
-    elsif /comic/i.match(sub_name) || /graphic n/i.match(sub_name)
+    elsif book.subject_array.grep(/comic/i).count > 0 || book.subject_array.grep(/graphic n/i).count > 0
       book.genre_id = Genre.find_by(name: "graphic novel").id
-    elsif /biography/i.match(sub_name)
+    elsif book.subject_array.grep(/music/i).count > 0
+      book.genre_id = Genre.find_by(name: "music").id
+    elsif book.subject_array.grep(/biography/i).count > 0
       book.genre_id = Genre.find_by(name: "biography").id
-    elsif /history/i.match(sub_name)
+    elsif book.subject_array.grep(/history/i).count > 0
       book.genre_id = Genre.find_by(name: "history").id
-    elsif /mythology/i.match(sub_name)
-      book.genre_id = Genre.find_by(name: "mythology").id
-    elsif /sports/i.match(sub_name)
+    elsif book.subject_array.grep(/mythology/i).count > 0 || book.subject_array.grep(/folktale/i).count > 0
+      book.genre_id = Genre.find_by(name: "mythology/folktales").id
+    elsif book.subject_array.grep(/sports/i).count > 0
       book.genre_id = Genre.find_by(name: "sports").id
-    elsif /fiction/i.match(sub_name) || /literature/i.match(sub_name)
+    elsif book.subject_array.grep(/biology/i).count > 0 || book.subject_array.grep(/chemistry/i).count > 0 || book.subject_array.grep(/physics/i).count > 0 || book.subject_array.grep(/engineering/).count > 0 || book.subject_array.grep(/geology/).count > 0
+      book.genre_id = Genre.find_by(name: "science").id
+    elsif book.subject_array.grep(/fiction/i).count > 0 || book.subject_array.grep(/literature/i).count > 0
       book.genre_id = Genre.find_by(name: "fiction").id
     else
       book.genre_id = Genre.find_by(name: "non-fiction/other").id
     end
-    # end
   end
 
-
-
-
-
-
-
-
-
-
-
-  # Number of pages
-
   book.save
-
-
-
 
 end
