@@ -63,6 +63,9 @@ GEM
     globalid (0.3.0)
       activesupport (>= 4.1.0)
     hike (1.2.3)
+    httparty (0.13.3)
+      json (~> 1.8)
+      multi_xml (>= 0.5.2)
     i18n (0.7.0)
     json (1.8.2)
     loofah (2.0.1)
@@ -77,6 +80,7 @@ GEM
     mini_portile (0.6.2)
     minitest (5.5.1)
     multi_json (1.10.1)
+    multi_xml (0.5.5)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
     orm_adapter (0.5.0)
@@ -131,10 +135,7 @@ GEM
       rspec-mocks (~> 3.1.0)
       rspec-support (~> 3.1.0)
     rspec-support (3.1.2)
-    ruby-debug-ide (0.4.24)
-      rake (>= 0.8.1)
     scrub_rb (1.0.1)
-    spring (1.2.0)
     sprockets (2.12.3)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -162,11 +163,10 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   devise_token_auth
+  httparty
   marc
   pg
   rack-cors
   rails (= 4.2.0)
   rails-api
   rspec-rails
-  ruby-debug-ide
-  spring

@@ -5,7 +5,6 @@ gem 'rails', '4.2.0'
 
 gem 'rails-api'
 
-gem 'spring', :group => :development
 
 gem 'devise_token_auth'
 
@@ -20,8 +19,7 @@ group :development do
   gem "binding_of_caller"
 end
 
-gem 'ruby-debug-ide'
-
+gem 'httparty'
 
 
 # To use ActiveModel has_secure_password
