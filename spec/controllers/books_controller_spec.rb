@@ -1,7 +1,9 @@
 require 'rails_helper'
 
 describe BooksController do
-  let(:book) {Book.create(title: "The Great Gatsby", author: "Fitzgerald, F. Scott")}
+  let(:genre) {Genre.create(name: "fiction")}
+
+  let(:book) {Book.create(title: "The Great Gatsby", author: "Fitzgerald, F. Scott", genre_id: genre.id)}
 
   describe 'GET #index' do
     it 'is successful' do
@@ -17,6 +19,7 @@ describe BooksController do
 
   describe 'GET #show' do
     it 'is successful' do
+
       get :show, id: book.id
       expect(response.status).to eq 200
     end
@@ -59,11 +62,11 @@ describe BooksController do
     end
 
     context 'subjects' do
-      it 'can search on particular subjects' do
-        book6 = Book.create(title: "Volcanoes", author: "Smith, Mary")
-        subject = Subject.create(name: "volcanoes")
-        BookSubject.create(book_id: book6.id, subject_id: subject.id)
-        get :search, subject: "Volcanoes"
+      it 'can search on particular genres' do
+        genre = Genre.create(name: "fiction")
+
+        book6 = Book.create(title: "Volcanoes", author: "Smith, Mary", genre_id: genre.id )
+        get :search, genre: "fiction"
         expect(assigns(:books)).to eq [book6]
       end
     end
