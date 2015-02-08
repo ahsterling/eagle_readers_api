@@ -131,6 +131,8 @@ GEM
       rspec-mocks (~> 3.1.0)
       rspec-support (~> 3.1.0)
     rspec-support (3.1.2)
+    ruby-debug-ide (0.4.24)
+      rake (>= 0.8.1)
     scrub_rb (1.0.1)
     spring (1.2.0)
     sprockets (2.12.3)
@@ -166,4 +168,5 @@ DEPENDENCIES
   rails (= 4.2.0)
   rails-api
   rspec-rails
+  ruby-debug-ide
   spring

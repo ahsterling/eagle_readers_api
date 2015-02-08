@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
           :recoverable, :rememberable, :trackable
 
   include DeviseTokenAuth::Concerns::User
-  validates :uid, uniqueness: true
+  validates :email, uniqueness: true
   has_many :user_books
   has_many :books, through: :user_books
   has_many :user_genre_badges

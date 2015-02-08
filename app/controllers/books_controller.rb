@@ -5,7 +5,6 @@ class BooksController < ApplicationController
   end
 
   def home
-    raise
   end
 
   def show
