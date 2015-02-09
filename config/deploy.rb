@@ -29,7 +29,7 @@ set :repo_url, 'git@github.com:ahsterling/eagle_readers_api.git'
 # set :linked_dirs, fetch(:linked_dirs, []).push('bin', 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system')
 
 # Default value for default_env is {}
-# set :default_env, { path: "/opt/ruby/bin:$PATH" }
+set :default_env, { 'DEVISE_SECRET_KEY': ENV["DEVISE_SECRET_KEY"] }
 
 # Default value for keep_releases is 5
 # set :keep_releases, 5
