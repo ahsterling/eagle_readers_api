@@ -6,6 +6,7 @@ class BooksController < ApplicationController
   end
 
   def home
+    render json: {home: 'here'}
   end
 
   def show
