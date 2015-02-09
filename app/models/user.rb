@@ -1,5 +1,10 @@
 class User < ActiveRecord::Base
-  validates :email, presence: true
+  # Include default devise modules.
+  devise :database_authenticatable, :registerable,
+          :recoverable, :rememberable, :trackable
+
+  include DeviseTokenAuth::Concerns::User
+  validates :email, uniqueness: true
   has_many :user_books
   has_many :books, through: :user_books
   has_many :user_genre_badges

@@ -31,9 +31,18 @@ module EagleReadersApi
     config.middleware.insert_before 0, "Rack::Cors" do
       allow do
         origins 'localhost:8000'
-        resource '*', :headers => :any, :methods => [:get, :post, :options, :delete, :patch]
+        resource '*',
+                 :headers => :any,
+                 :expose  => ['access-token', 'expiry', 'token-type', 'uid', 'client'],
+                 :methods => [:get, :post, :options, :delete, :patch]
       end
     end
+
+    config.middleware.insert_after ActiveRecord::QueryCache, ActionDispatch::Cookies
+
+    config.api_only = false
+
+    config.session_store :cookie_store, key: '_eagle_readers_api_session'
 
 
     # Do not swallow errors in after_commit/after_rollback callbacks.

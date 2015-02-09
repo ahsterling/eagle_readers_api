@@ -5,6 +5,9 @@ class BooksController < ApplicationController
     render json: @books.as_json
   end
 
+  def home
+  end
+
   def show
     book = Book.find(params[:id])
     render json: {

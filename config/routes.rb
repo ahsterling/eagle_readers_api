@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  mount_devise_token_auth_for 'User', at: '/auth'
 
   get "/books", to: "books#index", as: :books
   get "/books/search", to: "books#search"
@@ -19,6 +20,8 @@ Rails.application.routes.draw do
 
   get "/genre_badges", to: "genre_badges#index", as: :genre_badges
   get "/genre_badges/:id", to: "genre_badges#show", as: :genre_badge
+
+  root to: "books#home"
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
