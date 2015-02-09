@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: eagle_readers_api_production
-  username: eagle_readers_api
+  username: ubuntu
   password: <%= ENV['EAGLE_READERS_API_DATABASE_PASSWORD'] %>
