@@ -9,7 +9,6 @@ DeviseTokenAuth.setup do |config|
   # determines how long tokens will remain valid after they are issued.
   config.token_lifespan = 2.weeks
 
-  config.secret_key=ENV['DEVISE_SECRET_KEY']
   # Sometimes it's necessary to make several requests to the API at the same
   # time. In this case, each request in the batch will need to share the same
   # auth token. This setting determines how far apart the requests can be while
