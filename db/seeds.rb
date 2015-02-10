@@ -25,6 +25,11 @@ for record in reader
     book.title = title
   end
 
+  if /\s\//.match(book.title)
+    book.title = /\s\//.match(book.title).pre_match
+  end
+
+
   #loc number
   if record['010']
     loc_number = record['010']['a']
