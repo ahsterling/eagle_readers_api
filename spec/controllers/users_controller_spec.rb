@@ -3,7 +3,7 @@ require 'rails_helper'
 describe UsersController do
   describe 'GET #show' do
     it 'assigns @user to a particular user' do
-      user = User.create(email: 'email@email.com')
+      user = User.create(email: 'email@email.com', password: "blahblah", password_confirmation: "blahblah", uid: "email@email.com")
       get :show, id: user.id
       expect(assigns(:user)).to eq user
     end
@@ -11,7 +11,7 @@ describe UsersController do
 
   describe 'GET #books' do
     it 'assigns @books to a particular users books' do
-      user = User.create(email: 'email@email.com')
+      user = User.create(email: 'email@email.com', password: "blahblah", password_confirmation: "blahblah", uid: "email@email.com")
       book = Book.create(title: "Book")
       UserBook.create(user_id: user.id, book_id: book.id)
       get :books, user_id: user.id
@@ -21,7 +21,7 @@ describe UsersController do
 
   describe 'GET #badges' do
     it 'assigns @badges to a particular users badges' do
-      user = User.create(email: 'email@email.com')
+      user = User.create(email: 'email@email.com', password: "blahblah", password_confirmation: "blahblah", uid: "email@email.com")
       genre_badge = GenreBadge.create(genre_name: "Mystery")
       UserGenreBadge.create(user_id: user.id, genre_badge_id: genre_badge.id)
       get :badges, user_id: user.id
@@ -33,7 +33,7 @@ describe UsersController do
 
 
     it 'adds a book to a users shelf' do
-      user = User.create(email: "email@email.com")
+      user = User.create(email: 'email@email.com', password: "blahblah", password_confirmation: "blahblah", uid: "email@email.com")
       genre = Genre.create(name: "Fiction")
       book = Book.create(title: "Blah", genre_id: genre.id)
       subject = Subject.create(name: "Fantasy")
@@ -45,7 +45,7 @@ describe UsersController do
 
     context 'user earning badge' do
       it 'creates appropriate user_genre_badge when user adds book' do
-        user = User.create(email: "email@email.com")
+        user = User.create(email: 'email@email.com', password: "blahblah", password_confirmation: "blahblah", uid: "email@email.com")
         genre = Genre.create(name: "Fiction")
         book = Book.create(title: "Blah", genre_id: genre.id)
         # subject = Subject.create(name: "Fantasy")
@@ -59,7 +59,7 @@ describe UsersController do
       end
 
       it 'doesnt create another badge when user has already earned it' do
-        user = User.create(email: "email@email.com")
+        user = User.create(email: 'email@email.com', password: "blahblah", password_confirmation: "blahblah", uid: "email@email.com")
         genre = Genre.create(name: "Fiction")
         book = Book.create(title: "Blah", genre_id: genre.id)
         book2 = Book.create(title: "Another book", genre_id: genre.id)

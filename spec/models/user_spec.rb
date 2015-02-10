@@ -8,7 +8,7 @@ describe User do
   end
 
   describe 'associations' do
-    let(:user) {User.create(email: 'a@b.com')}
+    let(:user) {User.create(email: 'a@b.com', password: "blahblah", password_confirmation: "blahblah", uid: "a@b.com")}
     let(:book) {Book.create(title: "Blah")}
     let(:genre_badge) {GenreBadge.create(genre_name: "Fiction")}
     it 'a user can have many books' do
@@ -23,7 +23,7 @@ describe User do
   end
 
   describe '#has_genre_badge?(genre_name)' do
-    let(:user) { User.create(email: "a@b.com") }
+    let(:user) {User.create(email: 'a@b.com', password: "blahblah", password_confirmation: "blahblah", uid: "a@b.com")}
     let(:genre) { Genre.create(name: "Fiction") }
     let(:book) { Book.create(title: "Blah", genre_id: genre.id) }
     let(:subject) { Subject.create(name: "Mystery")}
