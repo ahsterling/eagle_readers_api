@@ -6,7 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-genres = ["music", "fantasy", "science fiction", "historical fiction", "mystery", "horror", "adventure", "fiction", "animals", "poetry", "graphic novel", "biography", "history", "mythology/folktales", "sports", "science", "non-fiction/other"]
+genres = ["music", 'eagles read', "fantasy", "science fiction", "historical fiction", "mystery", "horror", "adventure", "fiction", "animals", "poetry", "graphic novel", "biography", "history", "mythology/folktales", "sports", "science", "non-fiction/other"]
 
 genres.each do |genre|
   Genre.create(name: genre)
@@ -118,6 +118,8 @@ for record in reader
 
   book.save
 
+
+
   # ["fantasy", "science fiction", "historical fiction", "mystery", "horror", "adventure", "paranormal", "fiction", "political fiction", "animals", "poetry", "graphic novel", "biography", "non-fiction"]
   # if book.subject_array.count == 0
   #   book.genre_id = Genre.find_by(name: 'non-fiction/other')
@@ -164,4 +166,63 @@ for record in reader
 
   book.save
 
+end
+
+eagles_reads = ['Adventures of superhero girl',
+                'Africa is my home',
+                'Amulet: The stonekeeper',
+                'Beautiful music for ugly children',
+                'boxers and saints',
+                'counting by 7',
+                'courage has no color',
+                'divergent',
+                "ender's game",
+                'fairy tale comics',
+                'far far away',
+                'fourth down and inches',
+                'freakboy',
+                'a girl called problem',
+                'the girl who fell to earth',
+                "go: a kid's guide to graphic design",
+                'how i became a ghost',
+                'i am malala',
+                'i am number four',
+                'if i ever get out of here',
+                'imprisoned: the betrayal of',
+                'kampung boy',
+                'listening for luca',
+                'the living',
+                'luna',
+                'mister max:finder of lost things',
+                'the menagerie',
+                'the nazi hunters',
+                'nelson mandela',
+                'one came home',
+                'open mic',
+                'paper towns',
+                'port chicago 50',
+                'the president has been shot',
+                "the ranger's apprentice",
+                'the reason i jump',
+                'the rithmatist',
+                'rose under fire',
+                'the selection',
+                'this is the rope',
+                'this is what happy looks like',
+                'to die for',
+                'two boys kissing',
+                'the vine basket',
+                'when I was the greatest',
+                'where the streets had a name',
+                'will & whit',
+                'yaqui delgado wants to',
+                'yes, we are latinos',
+                'zombie baseball beatdown']
+
+eagles_reads.each do |book|
+  results = Book.where("title ILIKE ?", "%#{book}%")
+  results.each do |result|
+    result.genre_id = Genre.find_by("name ILIKE ?", "eagles read").id
+    result.save
+  end
 end
