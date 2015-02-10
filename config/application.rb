@@ -34,7 +34,7 @@ module EagleReadersApi
         resource '*',
                  :headers => :any,
                  :expose  => ['access-token', 'expiry', 'token-type', 'uid', 'client'],
-                 :methods => [:get, :post, :options, :delete, :patch]
+                 :methods => [:get, :post, :options, :delete, :patch, :put]
       end
     end
 
