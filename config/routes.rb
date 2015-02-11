@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
   get "/subjects", to: "subjects#index", as: :subjects
 
+  get '/users/usernames', to: "users#usernames"
+
   get "/users/:id", to: "users#show", as: :user
   get "/users/:user_id/books", to: "users#books"
 
