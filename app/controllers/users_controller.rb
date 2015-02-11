@@ -30,16 +30,7 @@ class UsersController < ApplicationController
   end
 
   def usernames
-    usernames = [];
-    CSV.foreach('eckstein_usernames.csv') do |row|
-      username = row[1]
-
-      if /@/.match(username)
-        username = /@/.match(username).pre_match
-      end
-      usernames << username
-    end
-    render json: usernames.as_json
+    render json: USERNAMES.as_json
   end
 
 end
