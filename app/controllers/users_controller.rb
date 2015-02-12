@@ -29,4 +29,8 @@ class UsersController < ApplicationController
     render json: @book.as_json
   end
 
+  def usernames
+    render json: USERNAMES.as_json
+  end
+
 end
