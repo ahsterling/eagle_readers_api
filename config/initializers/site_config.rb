@@ -7,3 +7,5 @@ CSV.foreach('eckstein_usernames.csv') do |row|
   end
   USERNAMES << username
 end
+
+USERNAMES << "test"
