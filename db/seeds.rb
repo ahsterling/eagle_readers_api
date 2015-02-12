@@ -125,7 +125,7 @@ for record in reader
   #   book.genre_id = Genre.find_by(name: 'non-fiction/other')
   # else
   if book.subject_array.count == 0
-    book.genre_id = Genre.find_by(name: "non-fiction/other")
+    book.genre_id = Genre.find_by(name: "non-fiction/other").id
   else
     if book.subject_array.grep(/fantasy/i).count > 0 || book.subject_array.grep(/fantastical/i).count > 0
       book.genre_id = Genre.find_by(name: "fantasy").id
