@@ -113,6 +113,37 @@ describe UsersController do
         expect(User.find(user.id).genre_badges[0].title).to eq 'genre champion'
 
       end
+
+      it 'creates genre explorer badge when user adds book and has 5 books of dif genres' do
+        user = User.create(email: 'email@email.com', password: "blahblah", password_confirmation: "blahblah", uid: "email@email.com")
+
+        genre = Genre.create(name: "Fiction")
+        genre2 = Genre.create(name: "History")
+        genre3 = Genre.create(name: "Sci fi")
+        genre4 = Genre.create(name: "Biography")
+        genre5 = Genre.create(name: "nonfiction")
+
+        book = Book.create(title: "Blah", genre_id: genre.id)
+        book2 = Book.create(title: "Blah2", genre_id: genre2.id)
+        book3 = Book.create(title: "Blah3", genre_id: genre3.id)
+        book4 = Book.create(title: "Blah4", genre_id: genre4.id)
+        book5 = Book.create(title: "Blah5", genre_id: genre5.id)
+
+        UserBook.create(user_id: user.id, book_id: book.id)
+        UserBook.create(user_id: user.id, book_id: book2.id)
+        UserBook.create(user_id: user.id, book_id: book3.id)
+        UserBook.create(user_id: user.id, book_id: book4.id)
+
+        genre_badge = GenreBadge.create(explorer_badge: true, title: 'genre explorer')
+
+        auth_headers = user.create_new_auth_token
+        request.headers.merge!(auth_headers)
+
+        post :add_book, {book_id: book5.id, user_id: user.id}, auth_headers
+
+        expect(User.find(user.id).genre_badges[0].title).to eq 'genre explorer'
+
+      end
     end
   end
 end
