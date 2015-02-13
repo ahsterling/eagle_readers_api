@@ -21,19 +21,48 @@ class User < ActiveRecord::Base
 
     return has_badge
 
-    # self.books.includes(:subjects).each do |book|
-    #   book.subjects.each do |subject|
-    #     if subject.name == genre_name
-    #       has_badge = true
-    #     end
+  end
+
+  def has_bulk_genre_badge?(genre_name)
+    has_badge = false
+    count = 0
+
+    self.books.each do |book|
+      if book.genre.name == genre_name
+        count += 1
+      end
+    end
+
+    if count >= 5
+      has_badge = true
+    end
+
+    return has_badge
+  end
+
+    # has_badge = false
+    # genres = {}
+    #
+    # self.books.each do |book|
+    #   if genres[book.genre.name]
+    #     genres[book.genre.name] += 1
+    #   else
+    #     genres[book.genre.name] = 1
     #   end
     # end
     #
+    # if genres.has_value?(5)
+    #   has_badge = true
+    # end
+    #
     # return has_badge
-  end
+    #
+    #
 
-  def already_has_badge(genre_name)
-    if self.genre_badges.where(genre_name: genre_name).length != 0
+  # end
+
+  def already_has_badge(badge_id)
+    if self.genre_badges.where(id: badge_id).length != 0
       return true
     else
       return false

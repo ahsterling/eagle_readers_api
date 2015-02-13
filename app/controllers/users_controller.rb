@@ -23,7 +23,13 @@ class UsersController < ApplicationController
     UserBook.create(user_id: params[:user_id], book_id: params[:book_id])
     user = User.find(params[:user_id])
     GenreBadge.all.each do |badge|
-      if user.has_genre_badge?(badge.genre_name) && !user.already_has_badge(badge.genre_name)
+      # check for bulk badges
+      if badge.bulk_badge == true && !user.already_has_badge(badge.id)
+        if user.has_bulk_genre_badge?(badge.genre_name)
+          UserGenreBadge.create(user_id: user.id, genre_badge_id: badge.id)
+        end
+      # check for standard genre badges
+      elsif user.has_genre_badge?(badge.genre_name) && !user.already_has_badge(badge.genre_name)
         UserGenreBadge.create(user_id: user.id, genre_badge_id: badge.id)
       end
     end

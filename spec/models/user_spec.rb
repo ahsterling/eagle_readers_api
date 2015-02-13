@@ -41,4 +41,31 @@ describe User do
       expect(user.has_genre_badge?("History")).to eq false
     end
   end
+
+  describe '#has_bulk_genre_badge?' do
+    let(:user) {User.create(email: 'a@b.com', password: "blahblah", password_confirmation: "blahblah", uid: "a@b.com")}
+    let(:genre) { Genre.create(name: "Fiction") }
+    let(:book1) { Book.create(title: "Blah1", genre_id: genre.id) }
+    let(:book2) { Book.create(title: "Blah2", genre_id: genre.id) }
+    let(:book3) { Book.create(title: "Blah3", genre_id: genre.id) }
+    let(:book4) { Book.create(title: "Blah4", genre_id: genre.id) }
+    let(:book5) { Book.create(title: "Blah5", genre_id: genre.id) }
+
+    let(:genre_badge) { GenreBadge.create(genre_name: "Fiction", bulk_badge: true) }
+
+    it 'returns true if a user has 5 books of the same genre' do
+      UserBook.create(user_id: user.id, book_id: book1.id)
+      UserBook.create(user_id: user.id, book_id: book2.id)
+      UserBook.create(user_id: user.id, book_id: book3.id)
+      UserBook.create(user_id: user.id, book_id: book4.id)
+      UserBook.create(user_id: user.id, book_id: book5.id)
+
+      expect(user.has_bulk_genre_badge?("Fiction")).to eq true
+
+    end
+
+    it 'returns false if a user does not have 5 books of the same genre' do
+      expect(user.has_bulk_genre_badge?("History")).to eq false
+    end
+  end
 end

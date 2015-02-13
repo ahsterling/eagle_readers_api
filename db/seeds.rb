@@ -6,11 +6,31 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-genres = ["music", 'eagles read', "fantasy", "science fiction", "historical fiction", "mystery", "horror", "adventure", "fiction", "animals", "poetry", "graphic novel", "biography", "history", "mythology/folktales", "sports", "science", "non-fiction/other"]
+genres = [
+  {name: "music", title: "Play It Again, Reader!", description: "Read a book about music"},
+  {name:'eagles read', title: "Eagles Reads Rock", description: 'Read an Eagles Read book'},
+  {name: "fantasy", title: "Unbelievable!", description: 'Read a fantasy book'},
+  {name: "science fiction", title: "To Infinity and Beyond!", description: "Read a science fiction book"},
+  {name: "historical fiction", title: "Historical Fiction", description: "Read a historical fiction"},
+  {name: "mystery", title: "Whodunnit?", description: "Read a mystery"},
+  {name: "horror", title: "Eeeek!", description: "Read a horror book"},
+  {name: "adventure", title: "Here We Go!", description: "Read an adventure book"},
+  {name: "fiction", title: "The Real Deal", description: "Read a fiction book"},
+  {name: "animals", title: "Animal Ranger", description: "Read a book about animals"},
+  {name: "poetry", title: "Poetry Slam", description: "Read a poetry book"},
+  {name: "graphic novel", title: "Comic Extravaganza", description: "Read a graphic novel"},
+  {name: "biography", title: "#truestory", description: "Read a biography"},
+  {name: "history", title: "Tell Me About It", description: "Read a book about history"},
+  {name: "mythology/folktales", title: "Folktale", description: "Read a book about mythology or folktales"},
+  {name: "sports", title: "Go Team!", description: "Read a book about sports"},
+  {name: "science", title: "Science Explorer", description: "Read a book about science"},
+  {name: "non-fiction/other", title: "I didn't know that . .  ", description: "Read a non-fiction book"}
+]
 
 genres.each do |genre|
-  Genre.create(name: genre)
-  GenreBadge.create(genre_name: genre)
+  Genre.create(name: genre[:name])
+  GenreBadge.create(genre_name: genre[:name], title: genre[:title])
+  GenreBadge.create(genre_name: genre[:name], title: "Genre Explorer: #{genre[:name]}", bulk_badge: true)
 end
 
 reader = MARC::Reader.new("erin_books_2.dat")
