@@ -40,6 +40,20 @@ class User < ActiveRecord::Base
     return has_badge
   end
 
+  def has_genre_explorer_badge?
+    has_badge = false
+    genres = []
+    self.books.each do |book|
+      unless genres.include?(book.genre.name)
+        genres << book.genre.name
+      end
+    end
+
+    if genres.count >= 5
+      has_badge = true
+    end
+  end
+
     # has_badge = false
     # genres = {}
     #

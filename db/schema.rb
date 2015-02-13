@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150213191017) do
+ActiveRecord::Schema.define(version: 20150213201432) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,10 +40,11 @@ ActiveRecord::Schema.define(version: 20150213191017) do
   create_table "genre_badges", force: :cascade do |t|
     t.string   "genre_name"
     t.text     "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
     t.string   "title"
     t.boolean  "bulk_badge"
+    t.boolean  "explorer_badge"
   end
 
   create_table "genres", force: :cascade do |t|
