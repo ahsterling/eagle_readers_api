@@ -85,6 +85,34 @@ describe UsersController do
         post :add_book, book_id: book2.id, user_id: user.id
         expect(User.find(user.id).genre_badges.count).to eq 1
       end
+
+      it 'creates genre champion bacge when user adds book and has 5 of same genre' do
+        user = User.create(email: 'email@email.com', password: "blahblah", password_confirmation: "blahblah", uid: "email@email.com")
+        genre = Genre.create(name: "Fiction")
+
+        book = Book.create(title: "Blah", genre_id: genre.id)
+        book2 = Book.create(title: "Blah2", genre_id: genre.id)
+        book3 = Book.create(title: "Blah3", genre_id: genre.id)
+        book4 = Book.create(title: "Blah4", genre_id: genre.id)
+        book5 = Book.create(title: "Blah5", genre_id: genre.id)
+
+        UserBook.create(user_id: user.id, book_id: book.id)
+        UserBook.create(user_id: user.id, book_id: book2.id)
+        UserBook.create(user_id: user.id, book_id: book3.id)
+        UserBook.create(user_id: user.id, book_id: book4.id)
+
+
+        # subject = Subject.create(name: "Fantasy")
+        genre_badge = GenreBadge.create(genre_name: "Fiction", bulk_badge: true, title: 'genre champion')
+        auth_headers = user.create_new_auth_token
+        request.headers.merge!(auth_headers)
+
+        # book.subjects << subject
+
+        post :add_book, {book_id: book5.id, user_id: user.id}, auth_headers
+        expect(User.find(user.id).genre_badges[0].title).to eq 'genre champion'
+
+      end
     end
   end
 end
