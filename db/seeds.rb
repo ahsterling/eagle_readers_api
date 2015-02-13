@@ -30,8 +30,10 @@ genres = [
 genres.each do |genre|
   Genre.create(name: genre[:name])
   GenreBadge.create(genre_name: genre[:name], title: genre[:title])
-  GenreBadge.create(genre_name: genre[:name], title: "Genre Explorer: #{genre[:name]}", bulk_badge: true)
+  GenreBadge.create(genre_name: genre[:name], title: "Genre Champion: #{genre[:name]}", bulk_badge: true)
 end
+
+GenreBadge.create(title: "Genre Explorer", explorer_badge: true)
 
 reader = MARC::Reader.new("erin_books_2.dat")
 
