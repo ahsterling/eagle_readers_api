@@ -32,6 +32,8 @@ end
 gem 'therubyracer', platforms: :ruby
 gem 'factory_girl_rails'
 
+gem 'simplecov', :require => false, :group => :test
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
