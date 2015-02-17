@@ -34,6 +34,12 @@ gem 'factory_girl_rails'
 
 gem 'simplecov', :require => false, :group => :test
 
+gem 'mini_magick'
+gem 'carrierwave'
+gem 'fog'
+gem 'dotenv-rails'
+
+
 # To use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
