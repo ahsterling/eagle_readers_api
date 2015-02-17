@@ -13,7 +13,7 @@ genres = [
   {name: "science fiction", title: "To Infinity and Beyond!", description: "Read a science fiction book", image: "app/assets/images/badge_icons/scifi.png"},
   {name: "historical fiction", title: "Can You Imagine It?", description: "Read a historical fiction", image: "app/assets/images/badge_icons/hist_fic.png"},
   {name: "mystery", title: "Whodunnit?", description: "Read a mystery", image: "app/assets/images/badge_icons/mystery.png"},
-  {name: "horror", title: "Eeeek!", description: "Read a horror book", image: "app/assets/images/badges_icons/horror.png"},
+  {name: "horror", title: "Eeeek!", description: "Read a horror book", image: "app/assets/images/badge_icons/horror.png"},
   {name: "adventure", title: "Here We Go!", description: "Read an adventure book", image: "app/assets/images/badge_icons/adventure.png"},
   {name: "fiction", title: "Tell Me A Story", description: "Read a fiction book", image: "app/assets/images/badge_icons/fiction.png"},
   {name: "animals", title: "Animal Ranger", description: "Read a book about animals", image: "app/assets/images/badge_icons/animal.png"},
