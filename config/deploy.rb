@@ -1,4 +1,6 @@
 # config valid only for current version of Capistrano
+require 'dotenv'
+Dotenv.load
 lock '3.3.5'
 
 set :application, 'eagle-readers-api'
@@ -29,7 +31,12 @@ set :repo_url, 'git@github.com:ahsterling/eagle_readers_api.git'
 # set :linked_dirs, fetch(:linked_dirs, []).push('bin', 'log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system')
 
 # Default value for default_env is {}
-set :default_env, { 'DEVISE_SECRET_KEY'=> ENV["DEVISE_SECRET_KEY"] }
+set :default_env, {
+  'DEVISE_SECRET_KEY'=> ENV["DEVISE_SECRET_KEY"],
+  'S3_KEY' => ENV["S3_KEY"],
+  'S3_SECRET' => ENV['S3_SECRET'],
+  'S3_BUCKET_NAME' => ENV['S3_BUCKET_NAME']
+  }
 
 # Default value for keep_releases is 5
 # set :keep_releases, 5
