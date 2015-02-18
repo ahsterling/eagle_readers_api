@@ -29,7 +29,7 @@ genres = [
 
 genres.each do |genre|
   Genre.create(name: genre[:name])
-  genre_badge = GenreBadge.create(genre_name: genre[:name], title: genre[:title])
+  genre_badge = GenreBadge.create(genre_name: genre[:name], title: genre[:title], description: genre[:description])
   image_src = File.join(Rails.root, genre[:image])
   src_file = File.new(image_src)
   genre_badge.image = src_file
@@ -162,8 +162,8 @@ for record in reader
   else
     if book.subject_array.grep(/fantasy/i).count > 0 || book.subject_array.grep(/fantastical/i).count > 0
       book.genre_id = Genre.find_by(name: "fantasy").id
-    elsif book.subject_array.grep(/science fic/).count > 0
-      book.genre_id = Genre.find_by(name: "science fiction")
+    elsif book.subject_array.grep(/science fic/i).count > 0
+      book.genre_id = Genre.find_by(name: "science fiction").id
     elsif book.subject_array.grep(/historical f/i).count > 0
       book.genre_id = Genre.find_by(name: "historical fiction").id
     elsif book.subject_array.grep(/mystery/i).count > 0 || book.subject_array.grep(/suspense/i).count > 0

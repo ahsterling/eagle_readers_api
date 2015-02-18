@@ -51,7 +51,7 @@ class UsersController < ApplicationController
       badges: []
     }
     badges_earned.each do |badge|
-      response[:badges] << badge.genre_badge.title
+      response[:badges] << badge
     end
 
     render json: response.as_json
