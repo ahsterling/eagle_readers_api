@@ -7,24 +7,24 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 genres = [
-  {name: "music", title: "Play It Again, Reader!", description: "Read a book about music", image: "app/assets/images/badge_icons/music.png"},
-  {name:'eagles read', title: "Eagles Reads Rock", description: 'Read an Eagles Read book', image: "app/assets/images/badge_icons/eagle.png"},
-  {name: "fantasy", title: "Unbelievable!", description: 'Read a fantasy book', image: "app/assets/images/badge_icons/fantasy.png"},
-  {name: "science fiction", title: "To Infinity and Beyond!", description: "Read a science fiction book", image: "app/assets/images/badge_icons/scifi.png"},
-  {name: "historical fiction", title: "Can You Imagine It?", description: "Read a historical fiction", image: "app/assets/images/badge_icons/hist_fic.png"},
-  {name: "mystery", title: "Whodunnit?", description: "Read a mystery", image: "app/assets/images/badge_icons/mystery.png"},
-  {name: "horror", title: "Eeeek!", description: "Read a horror book", image: "app/assets/images/badge_icons/horror.png"},
-  {name: "adventure", title: "Here We Go!", description: "Read an adventure book", image: "app/assets/images/badge_icons/adventure.png"},
-  {name: "fiction", title: "Tell Me A Story", description: "Read a fiction book", image: "app/assets/images/badge_icons/fiction.png"},
-  {name: "animals", title: "Animal Ranger", description: "Read a book about animals", image: "app/assets/images/badge_icons/animal.png"},
-  {name: "poetry", title: "Poetry Slam", description: "Read a poetry book", image: "app/assets/images/badge_icons/poetry.png"},
-  {name: "graphic novel", title: "Comic Extravaganza", description: "Read a graphic novel", image: "app/assets/images/badge_icons/comics.png"},
-  {name: "biography", title: "#truestory", description: "Read a biography", image: "app/assets/images/badge_icons/biography.png"},
-  {name: "history", title: "Tell Me About It", description: "Read a book about history", image: "app/assets/images/badge_icons/history.png"},
-  {name: "mythology/folktales", title: "Mythbusters", description: "Read a book about mythology or folktales", image: "app/assets/images/badge_icons/mythology.png"},
-  {name: "sports", title: "Go Team!", description: "Read a book about sports", image: "app/assets/images/badge_icons/sports.png"},
-  {name: "science", title: "Mad Scientist", description: "Read a book about science", image: "app/assets/images/badge_icons/science.png"},
-  {name: "non-fiction/other", title: "I didn't know that . .  ", description: "Read a non-fiction book", image: "app/assets/images/badge_icons/nonfiction.png"}
+  {name: "music", title: "Play It Again, Reader!", description: "Read a book about music", image: "app/assets/images/badge_icons/music.png", bulk_image: "app/assets/images/badge_icons/music_bulk.png"},
+  {name:'eagles read', title: "Eagles Reads Rock", description: 'Read an Eagles Read book', image: "app/assets/images/badge_icons/eagle.png", bulk_image: "app/assets/images/badge_icons/eagle_bulk.png"},
+  {name: "fantasy", title: "Unbelievable!", description: 'Read a fantasy book', image: "app/assets/images/badge_icons/fantasy.png", bulk_image: "app/assets/images/badge_icons/fantasy_bulk.png"},
+  {name: "science fiction", title: "To Infinity and Beyond!", description: "Read a science fiction book", image: "app/assets/images/badge_icons/scifi.png", bulk_image: "app/assets/images/badge_icons/scifi_bulk.png"},
+  {name: "historical fiction", title: "Can You Imagine It?", description: "Read a historical fiction", image: "app/assets/images/badge_icons/hist_fic.png", bulk_image: "app/assets/images/badge_icons/hist_fic_bulk.png"},
+  {name: "mystery", title: "Whodunnit?", description: "Read a mystery", image: "app/assets/images/badge_icons/mystery.png", bulk_image: "app/assets/images/badge_icons/mystery_bulk.png"},
+  {name: "horror", title: "Eeeek!", description: "Read a horror book", image: "app/assets/images/badge_icons/horror.png", bulk_image: "app/assets/images/badge_icons/horror_bulk.png"},
+  {name: "adventure", title: "Here We Go!", description: "Read an adventure book", image: "app/assets/images/badge_icons/adventure.png", bulk_image: "app/assets/images/badge_icons/adventure_bulk.png"},
+  {name: "fiction", title: "Tell Me A Story", description: "Read a fiction book", image: "app/assets/images/badge_icons/fiction.png", bulk_image: "app/assets/images/badge_icons/fiction_bulk.png"},
+  {name: "animals", title: "Animal Ranger", description: "Read a book about animals", image: "app/assets/images/badge_icons/animal.png", bulk_image: "app/assets/images/badge_icons/animal_bulk.png"},
+  {name: "poetry", title: "Poetry Slam", description: "Read a poetry book", image: "app/assets/images/badge_icons/poetry.png", bulk_image: "app/assets/images/badge_icons/poetry_bulk.png"},
+  {name: "graphic novel", title: "Comic Extravaganza", description: "Read a graphic novel", image: "app/assets/images/badge_icons/comics.png", bulk_image: "app/assets/images/badge_icons/comics_bulk.png"},
+  {name: "biography", title: "#truestory", description: "Read a biography", image: "app/assets/images/badge_icons/biography.png", bulk_image: "app/assets/images/badge_icons/biography_bulk.png"},
+  {name: "history", title: "Tell Me About It", description: "Read a book about history", image: "app/assets/images/badge_icons/history.png", bulk_image: "app/assets/images/badge_icons/history_bulk.png"},
+  {name: "mythology/folktales", title: "Mythbusters", description: "Read a book about mythology or folktales", image: "app/assets/images/badge_icons/mythology.png", bulk_image: "app/assets/images/badge_icons/mythology_bulk.png"},
+  {name: "sports", title: "Go Team!", description: "Read a book about sports", image: "app/assets/images/badge_icons/sports.png", bulk_image: "app/assets/images/badge_icons/sports_bulk.png"},
+  {name: "science", title: "Mad Scientist", description: "Read a book about science", image: "app/assets/images/badge_icons/science.png", bulk_image: "app/assets/images/badge_icons/science_bulk.png"},
+  {name: "non-fiction/other", title: "I didn't know that . .  ", description: "Read a non-fiction book", image: "app/assets/images/badge_icons/nonfiction.png", bulk_image: "app/assets/images/badge_icons/nonfiction_bulk.png"}
 ]
 
 genres.each do |genre|
@@ -34,10 +34,18 @@ genres.each do |genre|
   src_file = File.new(image_src)
   genre_badge.image = src_file
   genre_badge.save
-  GenreBadge.create(genre_name: genre[:name], title: "Genre Champion: #{genre[:name]}", bulk_badge: true)
+  bulk_genre_badge = GenreBadge.create(genre_name: genre[:name], title: "Genre Champion: #{genre[:name]}", bulk_badge: true)
+  image_src = File.join(Rails.root, genre[:bulk_image])
+  src_file = File.new(image_src)
+  bulk_genre_badge.image = src_file
+  bulk_genre_badge.save
 end
 
-GenreBadge.create(title: "Genre Explorer", explorer_badge: true)
+explorer_badge = GenreBadge.create(title: "Genre Explorer", explorer_badge: true, description: "Read 5 books from different genres")
+src_file = File.new('app/assets/images/badge_icons/genre_explorer.png')
+explorer_badge.image = src_file
+explorer_badge.save
+
 
 reader = MARC::Reader.new("erin_books_2.dat")
 
