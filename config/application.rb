@@ -30,7 +30,7 @@ module EagleReadersApi
 
     config.middleware.insert_before 0, "Rack::Cors" do
       allow do
-        origins 'http://localhost:8000', '54.186.52.32'
+        origins 'http://localhost:8000', '54.186.52.32', 'http://www.eaglereaders.com'
         resource '*',
                  :headers => :any,
                  :expose  => ['access-token', 'expiry', 'token-type', 'uid', 'client'],
