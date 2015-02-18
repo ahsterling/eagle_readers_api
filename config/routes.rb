@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 
   get "/users/:id", to: "users#show", as: :user
   get "/users/:user_id/books", to: "users#books"
+  get "/users/:user_id/books/genres", to: 'users#genres'
 
   get "/users/:user_id/badges", to: "users#badges"
 

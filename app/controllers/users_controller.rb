@@ -19,6 +19,17 @@ class UsersController < ApplicationController
     render json: @badges.as_json
   end
 
+  def genres
+    user = User.find(params[:user_id])
+    @genres = []
+    user.books.each do |book|
+      unless @genres.include?(book.genre)
+        @genres << book.genre
+      end
+    end
+    render json: @genres.as_json
+  end
+
   def add_book
     UserBook.create(user_id: params[:user_id], book_id: params[:book_id])
     user = User.find(params[:user_id])

@@ -38,6 +38,22 @@ describe UsersController do
     end
   end
 
+  describe 'GET #genres' do
+    it 'assigns genres to a particular users books genres' do
+      user = User.create(email: 'email@email.com', password: "blahblah", password_confirmation: "blahblah", uid: "email@email.com")
+      genre = Genre.create(name: "Fiction")
+      book = Book.create(title: "Blah", genre_id: genre.id)
+      UserBook.create(user_id: user.id, book_id: book.id)
+
+
+      auth_headers = user.create_new_auth_token
+      request.headers.merge!(auth_headers)
+
+      get :genres, {user_id: user.id}, auth_headers
+      expect(assigns(:genres)).to eq [genre]
+    end
+  end
+
   describe 'POST #add_book' do
 
 

@@ -14,26 +14,26 @@
       <img src="./assets/0.8.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-02-18T09:22:59-08:00">2015-02-18T09:22:59-08:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-02-18T11:55:27-08:00">2015-02-18T11:55:27-08:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">97.73%</span></span>
+    (<span class="covered_percent"><span class="green">97.8%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         6.6
+         6.42
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>37</b> files in total.
-    <b>528</b> relevant lines. 
-    <span class="green"><b>516</b> lines covered</span> and
+    <b>546</b> relevant lines. 
+    <span class="green"><b>534</b> lines covered</span> and
     <span class="red"><b>12</b> lines missed </span>
   </div>
   <table class="file_list">
@@ -102,12 +102,12 @@
       
       <tr>
         <td class="strong"><a href="#ae27903e93a8ab7a73836a84b35675b4ee12ae23" class="src_link" title="app/controllers/users_controller.rb">app/controllers/users_controller.rb</a></td>
-        <td class="green strong">97.14 %</td>
-        <td>64</td>
-        <td>35</td>
-        <td>34</td>
+        <td class="green strong">97.62 %</td>
+        <td>75</td>
+        <td>42</td>
+        <td>41</td>
         <td>1</td>
-        <td>1.9</td>
+        <td>1.8</td>
       </tr>
       
       <tr>
@@ -303,9 +303,9 @@
       <tr>
         <td class="strong"><a href="#588ecaffe68b1c2f684c5b71072f9f16f61973a7" class="src_link" title="config/routes.rb">config/routes.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>82</td>
-        <td>16</td>
-        <td>16</td>
+        <td>83</td>
+        <td>17</td>
+        <td>17</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -353,9 +353,9 @@
       <tr>
         <td class="strong"><a href="#1c426b95ce4586fb32f0e962ae8e42f1c5d0aff1" class="src_link" title="spec/controllers/users_controller_spec.rb">spec/controllers/users_controller_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>149</td>
-        <td>100</td>
-        <td>100</td>
+        <td>165</td>
+        <td>110</td>
+        <td>110</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -997,10 +997,10 @@
         <div class="source_table" id="ae27903e93a8ab7a73836a84b35675b4ee12ae23">
   <div class="header">
     <h3>app/controllers/users_controller.rb</h3>
-    <h4><span class="green">97.14 %</span> covered</h4>
+    <h4><span class="green">97.62 %</span> covered</h4>
     <div>
-      <b>35</b> relevant lines. 
-      <span class="green"><b>34</b> lines covered</span> and
+      <b>42</b> relevant lines. 
+      <span class="green"><b>41</b> lines covered</span> and
       <span class="red"><b>1</b> lines missed.</span>
     </div>
   </div>
@@ -1137,256 +1137,322 @@
         <li class="covered" data-hits="1" data-linenumber="22">
           <span class="hits">1</span>
           
-          <code class="ruby">  def add_book</code>
+          <code class="ruby">  def genres</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="23">
-          <span class="hits">4</span>
-          
-          <code class="ruby">    UserBook.create(user_id: params[:user_id], book_id: params[:book_id])</code>
-        </li>
-      
-        <li class="covered" data-hits="4" data-linenumber="24">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="1" data-linenumber="23">
+          <span class="hits">1</span>
           
           <code class="ruby">    user = User.find(params[:user_id])</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="25">
-          <span class="hits">4</span>
-          
-          <code class="ruby">    badges_earned = []</code>
-        </li>
-      
-        <li class="covered" data-hits="4" data-linenumber="26">
-          <span class="hits">4</span>
-          
-          <code class="ruby">    GenreBadge.all.each do |badge|</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="27">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="5" data-linenumber="28">
-          <span class="hits">5</span>
-          
-          <code class="ruby">      unless user.already_has_badge(badge.id)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="29">
-          
-          
-          <code class="ruby">      # check for bulk badges</code>
-        </li>
-      
-        <li class="covered" data-hits="5" data-linenumber="30">
-          <span class="hits">5</span>
-          
-          <code class="ruby">        if badge.bulk_badge == true</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="31">
+        <li class="covered" data-hits="1" data-linenumber="24">
           <span class="hits">1</span>
           
-          <code class="ruby">          if user.has_bulk_genre_badge?(badge.genre_name)</code>
+          <code class="ruby">    @genres = []</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="32">
+        <li class="covered" data-hits="1" data-linenumber="25">
           <span class="hits">1</span>
           
-          <code class="ruby">            bulk_badge = UserGenreBadge.create(user_id: user.id, genre_badge_id: badge.id)</code>
+          <code class="ruby">    user.books.each do |book|</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="33">
+        <li class="covered" data-hits="1" data-linenumber="26">
           <span class="hits">1</span>
           
-          <code class="ruby">            badges_earned &lt;&lt; bulk_badge</code>
+          <code class="ruby">      unless @genres.include?(book.genre)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="34">
-          
-          
-          <code class="ruby">          end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="35">
-          
-          
-          <code class="ruby">        # check for explorer badges</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="36">
-          
-          
-          <code class="ruby">        elsif badge.explorer_badge == true</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="37">
+        <li class="covered" data-hits="1" data-linenumber="27">
           <span class="hits">1</span>
           
-          <code class="ruby">          if user.has_genre_explorer_badge?</code>
+          <code class="ruby">        @genres &lt;&lt; book.genre</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="38">
-          <span class="hits">1</span>
-          
-          <code class="ruby">            explorer_badge = UserGenreBadge.create(user_id: user.id, genre_badge_id: badge.id)</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="39">
-          <span class="hits">1</span>
-          
-          <code class="ruby">            badges_earned &lt;&lt; explorer_badge</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="40">
-          
-          
-          <code class="ruby">          end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="41">
-          
-          
-          <code class="ruby">        # check for standard genre badges</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="42">
-          
-          
-          <code class="ruby">        elsif user.has_genre_badge?(badge.genre_name)</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="43">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          badge = UserGenreBadge.create(user_id: user.id, genre_badge_id: badge.id)</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="44">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          badges_earned &lt;&lt; badge</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="45">
-          
-          
-          <code class="ruby">        end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="46">
+        <li class="never" data-hits="" data-linenumber="28">
           
           
           <code class="ruby">      end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="47">
+        <li class="never" data-hits="" data-linenumber="29">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="48">
-          <span class="hits">4</span>
+        <li class="covered" data-hits="1" data-linenumber="30">
+          <span class="hits">1</span>
           
-          <code class="ruby">    book = Book.find(params[:book_id])</code>
+          <code class="ruby">    render json: @genres.as_json</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="49">
-          <span class="hits">4</span>
+        <li class="never" data-hits="" data-linenumber="31">
           
-          <code class="ruby">    response = {</code>
+          
+          <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="50">
+        <li class="never" data-hits="" data-linenumber="32">
           
           
-          <code class="ruby">      book: book.title,</code>
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="33">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def add_book</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="34">
+          <span class="hits">4</span>
+          
+          <code class="ruby">    UserBook.create(user_id: params[:user_id], book_id: params[:book_id])</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="35">
+          <span class="hits">4</span>
+          
+          <code class="ruby">    user = User.find(params[:user_id])</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="36">
+          <span class="hits">4</span>
+          
+          <code class="ruby">    badges_earned = []</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="37">
+          <span class="hits">4</span>
+          
+          <code class="ruby">    GenreBadge.all.each do |badge|</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="38">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="39">
+          <span class="hits">5</span>
+          
+          <code class="ruby">      unless user.already_has_badge(badge.id)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="40">
+          
+          
+          <code class="ruby">      # check for bulk badges</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="41">
+          <span class="hits">5</span>
+          
+          <code class="ruby">        if badge.bulk_badge == true</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="42">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          if user.has_bulk_genre_badge?(badge.genre_name)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="43">
+          <span class="hits">1</span>
+          
+          <code class="ruby">            bulk_badge = UserGenreBadge.create(user_id: user.id, genre_badge_id: badge.id)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="44">
+          <span class="hits">1</span>
+          
+          <code class="ruby">            badges_earned &lt;&lt; bulk_badge</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="45">
+          
+          
+          <code class="ruby">          end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="46">
+          
+          
+          <code class="ruby">        # check for explorer badges</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="47">
+          
+          
+          <code class="ruby">        elsif badge.explorer_badge == true</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="48">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          if user.has_genre_explorer_badge?</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="49">
+          <span class="hits">1</span>
+          
+          <code class="ruby">            explorer_badge = UserGenreBadge.create(user_id: user.id, genre_badge_id: badge.id)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="50">
+          <span class="hits">1</span>
+          
+          <code class="ruby">            badges_earned &lt;&lt; explorer_badge</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="51">
           
           
-          <code class="ruby">      badges: []</code>
+          <code class="ruby">          end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="52">
           
           
-          <code class="ruby">    }</code>
+          <code class="ruby">        # check for standard genre badges</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="53">
-          <span class="hits">4</span>
+        <li class="never" data-hits="" data-linenumber="53">
           
-          <code class="ruby">    badges_earned.each do |badge|</code>
+          
+          <code class="ruby">        elsif user.has_genre_badge?(badge.genre_name)</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="54">
-          <span class="hits">3</span>
+        <li class="covered" data-hits="1" data-linenumber="54">
+          <span class="hits">1</span>
           
-          <code class="ruby">      response[:badges] &lt;&lt; badge</code>
+          <code class="ruby">          badge = UserGenreBadge.create(user_id: user.id, genre_badge_id: badge.id)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="55">
+        <li class="covered" data-hits="1" data-linenumber="55">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">    end</code>
+          <code class="ruby">          badges_earned &lt;&lt; badge</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="56">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">        end</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="57">
-          <span class="hits">4</span>
+        <li class="never" data-hits="" data-linenumber="57">
           
-          <code class="ruby">    render json: response.as_json</code>
+          
+          <code class="ruby">      end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="58">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="59">
+        <li class="covered" data-hits="4" data-linenumber="59">
+          <span class="hits">4</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">    book = Book.find(params[:book_id])</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="60">
-          <span class="hits">1</span>
+        <li class="covered" data-hits="4" data-linenumber="60">
+          <span class="hits">4</span>
           
-          <code class="ruby">  def usernames</code>
+          <code class="ruby">    response = {</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="61">
+        <li class="never" data-hits="" data-linenumber="61">
           
           
-          <code class="ruby">    render json: USERNAMES.as_json</code>
+          <code class="ruby">      book: book.title,</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="62">
           
           
-          <code class="ruby">  end</code>
+          <code class="ruby">      badges: []</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="63">
           
           
+          <code class="ruby">    }</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="64">
+          <span class="hits">4</span>
+          
+          <code class="ruby">    badges_earned.each do |badge|</code>
+        </li>
+      
+        <li class="covered" data-hits="3" data-linenumber="65">
+          <span class="hits">3</span>
+          
+          <code class="ruby">      response[:badges] &lt;&lt; badge.genre_badge</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="66">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="67">
+          
+          
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="64">
+        <li class="covered" data-hits="4" data-linenumber="68">
+          <span class="hits">4</span>
+          
+          <code class="ruby">    render json: response.as_json</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="69">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="70">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="71">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def usernames</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="72">
+          
+          
+          <code class="ruby">    render json: USERNAMES.as_json</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="73">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="74">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="75">
           
           
           <code class="ruby">end</code>
@@ -4107,8 +4173,8 @@
     <h3>config/routes.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>16</b> relevant lines. 
-      <span class="green"><b>16</b> lines covered</span> and
+      <b>17</b> relevant lines. 
+      <span class="green"><b>17</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -4206,403 +4272,409 @@
           <code class="ruby">  get &quot;/users/:user_id/books&quot;, to: &quot;users#books&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="16">
+        <li class="covered" data-hits="1" data-linenumber="16">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  get &quot;/users/:user_id/books/genres&quot;, to: &#39;users#genres&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="17">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="17">
+        <li class="covered" data-hits="1" data-linenumber="18">
           <span class="hits">1</span>
           
           <code class="ruby">  get &quot;/users/:user_id/badges&quot;, to: &quot;users#badges&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="18">
+        <li class="never" data-hits="" data-linenumber="19">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="19">
+        <li class="covered" data-hits="1" data-linenumber="20">
           <span class="hits">1</span>
           
           <code class="ruby">  post &quot;/users/:user_id/books/new&quot;, to: &quot;users#add_book&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="20">
+        <li class="never" data-hits="" data-linenumber="21">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="21">
+        <li class="covered" data-hits="1" data-linenumber="22">
           <span class="hits">1</span>
           
           <code class="ruby">  get &quot;/genres&quot;, to: &quot;genres#index&quot;, as: &quot;genres&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="22">
+        <li class="never" data-hits="" data-linenumber="23">
           
           
           <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="23">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  get &quot;/genre_badges&quot;, to: &quot;genre_badges#index&quot;, as: :genre_badges</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="24">
           <span class="hits">1</span>
           
+          <code class="ruby">  get &quot;/genre_badges&quot;, to: &quot;genre_badges#index&quot;, as: :genre_badges</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="25">
+          <span class="hits">1</span>
+          
           <code class="ruby">  get &quot;/genre_badges/:id&quot;, to: &quot;genre_badges#show&quot;, as: :genre_badge</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="25">
+        <li class="never" data-hits="" data-linenumber="26">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="26">
+        <li class="covered" data-hits="1" data-linenumber="27">
           <span class="hits">1</span>
           
           <code class="ruby">  root to: &quot;books#home&quot;</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="27">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
         <li class="never" data-hits="" data-linenumber="28">
           
           
-          <code class="ruby">  # The priority is based upon order of creation: first created -&gt; highest priority.</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="29">
           
           
-          <code class="ruby">  # See how all your routes lay out with &quot;rake routes&quot;.</code>
+          <code class="ruby">  # The priority is based upon order of creation: first created -&gt; highest priority.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="30">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  # See how all your routes lay out with &quot;rake routes&quot;.</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="31">
           
           
-          <code class="ruby">  # You can have the root of your site routed with &quot;root&quot;</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="32">
           
           
-          <code class="ruby">  # root &#39;welcome#index&#39;</code>
+          <code class="ruby">  # You can have the root of your site routed with &quot;root&quot;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="33">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  # root &#39;welcome#index&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="34">
           
           
-          <code class="ruby">  # Example of regular route:</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="35">
           
           
-          <code class="ruby">  #   get &#39;products/:id&#39; =&gt; &#39;catalog#view&#39;</code>
+          <code class="ruby">  # Example of regular route:</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="36">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  #   get &#39;products/:id&#39; =&gt; &#39;catalog#view&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="37">
           
           
-          <code class="ruby">  # Example of named route that can be invoked with purchase_url(id: product.id)</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="38">
           
           
-          <code class="ruby">  #   get &#39;products/:id/purchase&#39; =&gt; &#39;catalog#purchase&#39;, as: :purchase</code>
+          <code class="ruby">  # Example of named route that can be invoked with purchase_url(id: product.id)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="39">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  #   get &#39;products/:id/purchase&#39; =&gt; &#39;catalog#purchase&#39;, as: :purchase</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="40">
           
           
-          <code class="ruby">  # Example resource route (maps HTTP verbs to controller actions automatically):</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="41">
           
           
-          <code class="ruby">  #   resources :products</code>
+          <code class="ruby">  # Example resource route (maps HTTP verbs to controller actions automatically):</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="42">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  #   resources :products</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="43">
           
           
-          <code class="ruby">  # Example resource route with options:</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="44">
           
           
-          <code class="ruby">  #   resources :products do</code>
+          <code class="ruby">  # Example resource route with options:</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="45">
           
           
-          <code class="ruby">  #     member do</code>
+          <code class="ruby">  #   resources :products do</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="46">
           
           
-          <code class="ruby">  #       get &#39;short&#39;</code>
+          <code class="ruby">  #     member do</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="47">
           
           
-          <code class="ruby">  #       post &#39;toggle&#39;</code>
+          <code class="ruby">  #       get &#39;short&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="48">
           
           
-          <code class="ruby">  #     end</code>
+          <code class="ruby">  #       post &#39;toggle&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="49">
           
           
-          <code class="ruby">  #</code>
+          <code class="ruby">  #     end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="50">
           
           
-          <code class="ruby">  #     collection do</code>
+          <code class="ruby">  #</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="51">
           
           
-          <code class="ruby">  #       get &#39;sold&#39;</code>
+          <code class="ruby">  #     collection do</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="52">
           
           
-          <code class="ruby">  #     end</code>
+          <code class="ruby">  #       get &#39;sold&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="53">
           
           
-          <code class="ruby">  #   end</code>
+          <code class="ruby">  #     end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="54">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  #   end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="55">
           
           
-          <code class="ruby">  # Example resource route with sub-resources:</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="56">
           
           
-          <code class="ruby">  #   resources :products do</code>
+          <code class="ruby">  # Example resource route with sub-resources:</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="57">
           
           
-          <code class="ruby">  #     resources :comments, :sales</code>
+          <code class="ruby">  #   resources :products do</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="58">
           
           
-          <code class="ruby">  #     resource :seller</code>
+          <code class="ruby">  #     resources :comments, :sales</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="59">
           
           
-          <code class="ruby">  #   end</code>
+          <code class="ruby">  #     resource :seller</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="60">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  #   end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="61">
           
           
-          <code class="ruby">  # Example resource route with more complex sub-resources:</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="62">
           
           
-          <code class="ruby">  #   resources :products do</code>
+          <code class="ruby">  # Example resource route with more complex sub-resources:</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="63">
           
           
-          <code class="ruby">  #     resources :comments</code>
+          <code class="ruby">  #   resources :products do</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="64">
           
           
-          <code class="ruby">  #     resources :sales do</code>
+          <code class="ruby">  #     resources :comments</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="65">
           
           
-          <code class="ruby">  #       get &#39;recent&#39;, on: :collection</code>
+          <code class="ruby">  #     resources :sales do</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="66">
           
           
-          <code class="ruby">  #     end</code>
+          <code class="ruby">  #       get &#39;recent&#39;, on: :collection</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="67">
           
           
-          <code class="ruby">  #   end</code>
+          <code class="ruby">  #     end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="68">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  #   end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="69">
           
           
-          <code class="ruby">  # Example resource route with concerns:</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="70">
           
           
-          <code class="ruby">  #   concern :toggleable do</code>
+          <code class="ruby">  # Example resource route with concerns:</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="71">
           
           
-          <code class="ruby">  #     post &#39;toggle&#39;</code>
+          <code class="ruby">  #   concern :toggleable do</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="72">
           
           
-          <code class="ruby">  #   end</code>
+          <code class="ruby">  #     post &#39;toggle&#39;</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="73">
           
           
-          <code class="ruby">  #   resources :posts, concerns: :toggleable</code>
+          <code class="ruby">  #   end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="74">
           
           
-          <code class="ruby">  #   resources :photos, concerns: :toggleable</code>
+          <code class="ruby">  #   resources :posts, concerns: :toggleable</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="75">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">  #   resources :photos, concerns: :toggleable</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="76">
           
           
-          <code class="ruby">  # Example resource route within a namespace:</code>
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="77">
           
           
-          <code class="ruby">  #   namespace :admin do</code>
+          <code class="ruby">  # Example resource route within a namespace:</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="78">
           
           
-          <code class="ruby">  #     # Directs /admin/products/* to Admin::ProductsController</code>
+          <code class="ruby">  #   namespace :admin do</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="79">
           
           
-          <code class="ruby">  #     # (app/controllers/admin/products_controller.rb)</code>
+          <code class="ruby">  #     # Directs /admin/products/* to Admin::ProductsController</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="80">
           
           
-          <code class="ruby">  #     resources :products</code>
+          <code class="ruby">  #     # (app/controllers/admin/products_controller.rb)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="81">
           
           
-          <code class="ruby">  #   end</code>
+          <code class="ruby">  #     resources :products</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="82">
+          
+          
+          <code class="ruby">  #   end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="83">
           
           
           <code class="ruby">end</code>
@@ -5565,8 +5637,8 @@
     <h3>spec/controllers/users_controller_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>100</b> relevant lines. 
-      <span class="green"><b>100</b> lines covered</span> and
+      <b>110</b> relevant lines. 
+      <span class="green"><b>110</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -5817,91 +5889,91 @@
         <li class="covered" data-hits="1" data-linenumber="41">
           <span class="hits">1</span>
           
-          <code class="ruby">  describe &#39;POST #add_book&#39; do</code>
+          <code class="ruby">  describe &#39;GET #genres&#39; do</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="42">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="43">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="44">
+        <li class="covered" data-hits="1" data-linenumber="42">
           <span class="hits">1</span>
           
-          <code class="ruby">    it &#39;adds a book to a users shelf&#39; do</code>
+          <code class="ruby">    it &#39;assigns genres to a particular users books genres&#39; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="45">
+        <li class="covered" data-hits="1" data-linenumber="43">
           <span class="hits">1</span>
           
           <code class="ruby">      user = User.create(email: &#39;email@email.com&#39;, password: &quot;blahblah&quot;, password_confirmation: &quot;blahblah&quot;, uid: &quot;email@email.com&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="46">
+        <li class="covered" data-hits="1" data-linenumber="44">
           <span class="hits">1</span>
           
           <code class="ruby">      genre = Genre.create(name: &quot;Fiction&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="47">
+        <li class="covered" data-hits="1" data-linenumber="45">
           <span class="hits">1</span>
           
           <code class="ruby">      book = Book.create(title: &quot;Blah&quot;, genre_id: genre.id)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="48">
+        <li class="covered" data-hits="1" data-linenumber="46">
           <span class="hits">1</span>
           
-          <code class="ruby">      subject = Subject.create(name: &quot;Fantasy&quot;)</code>
+          <code class="ruby">      UserBook.create(user_id: user.id, book_id: book.id)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="49">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      genre_badge = GenreBadge.create(genre_name: &quot;Fantasy&quot;)</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="50">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      auth_headers = user.create_new_auth_token</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="51">
-          <span class="hits">1</span>
-          
-          <code class="ruby">      request.headers.merge!(auth_headers)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="52">
+        <li class="never" data-hits="" data-linenumber="47">
           
           
           <code class="ruby"></code>
         </li>
       
+        <li class="never" data-hits="" data-linenumber="48">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="49">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      auth_headers = user.create_new_auth_token</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="50">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      request.headers.merge!(auth_headers)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="51">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="52">
+          <span class="hits">1</span>
+          
+          <code class="ruby">      get :genres, {user_id: user.id}, auth_headers</code>
+        </li>
+      
         <li class="covered" data-hits="1" data-linenumber="53">
           <span class="hits">1</span>
           
-          <code class="ruby">      post :add_book, {book_id: book.id, user_id: user.id}, auth_headers</code>
+          <code class="ruby">      expect(assigns(:genres)).to eq [genre]</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="54">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="54">
           
-          <code class="ruby">      expect(user.books.count).to eq 1</code>
+          
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="55">
           
           
-          <code class="ruby">    end</code>
+          <code class="ruby">  end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="56">
@@ -5913,109 +5985,109 @@
         <li class="covered" data-hits="1" data-linenumber="57">
           <span class="hits">1</span>
           
-          <code class="ruby">    context &#39;user earning badge&#39; do</code>
+          <code class="ruby">  describe &#39;POST #add_book&#39; do</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="58">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="58">
           
-          <code class="ruby">      it &#39;creates appropriate user_genre_badge when user adds book&#39; do</code>
+          
+          <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="59">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="59">
           
-          <code class="ruby">        user = User.create(email: &#39;email@email.com&#39;, password: &quot;blahblah&quot;, password_confirmation: &quot;blahblah&quot;, uid: &quot;email@email.com&quot;)</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="60">
           <span class="hits">1</span>
           
-          <code class="ruby">        genre = Genre.create(name: &quot;Fiction&quot;)</code>
+          <code class="ruby">    it &#39;adds a book to a users shelf&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="61">
           <span class="hits">1</span>
           
-          <code class="ruby">        book = Book.create(title: &quot;Blah&quot;, genre_id: genre.id)</code>
+          <code class="ruby">      user = User.create(email: &#39;email@email.com&#39;, password: &quot;blahblah&quot;, password_confirmation: &quot;blahblah&quot;, uid: &quot;email@email.com&quot;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="62">
+        <li class="covered" data-hits="1" data-linenumber="62">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">        # subject = Subject.create(name: &quot;Fantasy&quot;)</code>
+          <code class="ruby">      genre = Genre.create(name: &quot;Fiction&quot;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="63">
           <span class="hits">1</span>
           
-          <code class="ruby">        genre_badge = GenreBadge.create(genre_name: &quot;Fiction&quot;)</code>
+          <code class="ruby">      book = Book.create(title: &quot;Blah&quot;, genre_id: genre.id)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="64">
           <span class="hits">1</span>
           
-          <code class="ruby">        genre_badge2 = GenreBadge.create(genre_name: &quot;Graphic Novel&quot;)</code>
+          <code class="ruby">      subject = Subject.create(name: &quot;Fantasy&quot;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="65">
           <span class="hits">1</span>
           
-          <code class="ruby">        auth_headers = user.create_new_auth_token</code>
+          <code class="ruby">      genre_badge = GenreBadge.create(genre_name: &quot;Fantasy&quot;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="66">
           <span class="hits">1</span>
           
-          <code class="ruby">        request.headers.merge!(auth_headers)</code>
+          <code class="ruby">      auth_headers = user.create_new_auth_token</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="67">
+        <li class="covered" data-hits="1" data-linenumber="67">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">      request.headers.merge!(auth_headers)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="68">
           
           
-          <code class="ruby">        # book.subjects &lt;&lt; subject</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="69">
+        <li class="covered" data-hits="1" data-linenumber="69">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">      post :add_book, {book_id: book.id, user_id: user.id}, auth_headers</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="70">
           <span class="hits">1</span>
           
-          <code class="ruby">        post :add_book, {book_id: book.id, user_id: user.id}, auth_headers</code>
+          <code class="ruby">      expect(user.books.count).to eq 1</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="71">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="71">
           
-          <code class="ruby">        expect(User.find(user.id).genre_badges.count).to eq 1</code>
+          
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="72">
           
           
-          <code class="ruby">      end</code>
+          <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="73">
+        <li class="covered" data-hits="1" data-linenumber="73">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">    context &#39;user earning badge&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="74">
           <span class="hits">1</span>
           
-          <code class="ruby">      it &#39;doesnt create another badge when user has already earned it&#39; do</code>
+          <code class="ruby">      it &#39;creates appropriate user_genre_badge when user adds book&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="75">
@@ -6036,94 +6108,94 @@
           <code class="ruby">        book = Book.create(title: &quot;Blah&quot;, genre_id: genre.id)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="78">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="78">
           
-          <code class="ruby">        book2 = Book.create(title: &quot;Another book&quot;, genre_id: genre.id)</code>
+          
+          <code class="ruby">        # subject = Subject.create(name: &quot;Fantasy&quot;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="79">
           <span class="hits">1</span>
           
-          <code class="ruby">        subject = Subject.create(name: &quot;Fantasy&quot;)</code>
+          <code class="ruby">        genre_badge = GenreBadge.create(genre_name: &quot;Fiction&quot;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="80">
           <span class="hits">1</span>
           
-          <code class="ruby">        genre_badge = GenreBadge.create(genre_name: &quot;Fantasy&quot;)</code>
+          <code class="ruby">        genre_badge2 = GenreBadge.create(genre_name: &quot;Graphic Novel&quot;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="81">
           <span class="hits">1</span>
           
-          <code class="ruby">        book.subjects &lt;&lt; subject</code>
+          <code class="ruby">        auth_headers = user.create_new_auth_token</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="82">
           <span class="hits">1</span>
           
-          <code class="ruby">        book2.subjects &lt;&lt; subject</code>
+          <code class="ruby">        request.headers.merge!(auth_headers)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="83">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="83">
           
-          <code class="ruby">        UserGenreBadge.create(user_id: user.id, genre_badge_id: genre_badge.id)</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="84">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">        # book.subjects &lt;&lt; subject</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="85">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="85">
           
-          <code class="ruby">        post :add_book, book_id: book2.id, user_id: user.id</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="86">
           <span class="hits">1</span>
           
-          <code class="ruby">        expect(User.find(user.id).genre_badges.count).to eq 1</code>
+          <code class="ruby">        post :add_book, {book_id: book.id, user_id: user.id}, auth_headers</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="87">
+        <li class="covered" data-hits="1" data-linenumber="87">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">      end</code>
+          <code class="ruby">        expect(User.find(user.id).genre_badges.count).to eq 1</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="88">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">      end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="89">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="89">
           
-          <code class="ruby">      it &#39;creates genre champion bacge when user adds book and has 5 of same genre&#39; do</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="90">
           <span class="hits">1</span>
           
-          <code class="ruby">        user = User.create(email: &#39;email@email.com&#39;, password: &quot;blahblah&quot;, password_confirmation: &quot;blahblah&quot;, uid: &quot;email@email.com&quot;)</code>
+          <code class="ruby">      it &#39;doesnt create another badge when user has already earned it&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="91">
           <span class="hits">1</span>
           
-          <code class="ruby">        genre = Genre.create(name: &quot;Fiction&quot;)</code>
+          <code class="ruby">        user = User.create(email: &#39;email@email.com&#39;, password: &quot;blahblah&quot;, password_confirmation: &quot;blahblah&quot;, uid: &quot;email@email.com&quot;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="92">
+        <li class="covered" data-hits="1" data-linenumber="92">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">        genre = Genre.create(name: &quot;Fiction&quot;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="93">
@@ -6135,61 +6207,61 @@
         <li class="covered" data-hits="1" data-linenumber="94">
           <span class="hits">1</span>
           
-          <code class="ruby">        book2 = Book.create(title: &quot;Blah2&quot;, genre_id: genre.id)</code>
+          <code class="ruby">        book2 = Book.create(title: &quot;Another book&quot;, genre_id: genre.id)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="95">
           <span class="hits">1</span>
           
-          <code class="ruby">        book3 = Book.create(title: &quot;Blah3&quot;, genre_id: genre.id)</code>
+          <code class="ruby">        subject = Subject.create(name: &quot;Fantasy&quot;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="96">
           <span class="hits">1</span>
           
-          <code class="ruby">        book4 = Book.create(title: &quot;Blah4&quot;, genre_id: genre.id)</code>
+          <code class="ruby">        genre_badge = GenreBadge.create(genre_name: &quot;Fantasy&quot;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="97">
           <span class="hits">1</span>
           
-          <code class="ruby">        book5 = Book.create(title: &quot;Blah5&quot;, genre_id: genre.id)</code>
+          <code class="ruby">        book.subjects &lt;&lt; subject</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="98">
+        <li class="covered" data-hits="1" data-linenumber="98">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">        book2.subjects &lt;&lt; subject</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="99">
           <span class="hits">1</span>
           
-          <code class="ruby">        UserBook.create(user_id: user.id, book_id: book.id)</code>
+          <code class="ruby">        UserGenreBadge.create(user_id: user.id, genre_badge_id: genre_badge.id)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="100">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="100">
           
-          <code class="ruby">        UserBook.create(user_id: user.id, book_id: book2.id)</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="101">
           <span class="hits">1</span>
           
-          <code class="ruby">        UserBook.create(user_id: user.id, book_id: book3.id)</code>
+          <code class="ruby">        post :add_book, book_id: book2.id, user_id: user.id</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="102">
           <span class="hits">1</span>
           
-          <code class="ruby">        UserBook.create(user_id: user.id, book_id: book4.id)</code>
+          <code class="ruby">        expect(User.find(user.id).genre_badges.count).to eq 1</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="103">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">      end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="104">
@@ -6198,58 +6270,58 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="105">
+        <li class="covered" data-hits="1" data-linenumber="105">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">        # subject = Subject.create(name: &quot;Fantasy&quot;)</code>
+          <code class="ruby">      it &#39;creates genre champion bacge when user adds book and has 5 of same genre&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="106">
           <span class="hits">1</span>
           
-          <code class="ruby">        genre_badge = GenreBadge.create(genre_name: &quot;Fiction&quot;, bulk_badge: true, title: &#39;genre champion&#39;)</code>
+          <code class="ruby">        user = User.create(email: &#39;email@email.com&#39;, password: &quot;blahblah&quot;, password_confirmation: &quot;blahblah&quot;, uid: &quot;email@email.com&quot;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="107">
           <span class="hits">1</span>
           
-          <code class="ruby">        auth_headers = user.create_new_auth_token</code>
+          <code class="ruby">        genre = Genre.create(name: &quot;Fiction&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="108">
+        <li class="never" data-hits="" data-linenumber="108">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="109">
           <span class="hits">1</span>
           
-          <code class="ruby">        request.headers.merge!(auth_headers)</code>
+          <code class="ruby">        book = Book.create(title: &quot;Blah&quot;, genre_id: genre.id)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="109">
+        <li class="covered" data-hits="1" data-linenumber="110">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">        book2 = Book.create(title: &quot;Blah2&quot;, genre_id: genre.id)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="110">
+        <li class="covered" data-hits="1" data-linenumber="111">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">        # book.subjects &lt;&lt; subject</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="111">
-          
-          
-          <code class="ruby"></code>
+          <code class="ruby">        book3 = Book.create(title: &quot;Blah3&quot;, genre_id: genre.id)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="112">
           <span class="hits">1</span>
           
-          <code class="ruby">        post :add_book, {book_id: book5.id, user_id: user.id}, auth_headers</code>
+          <code class="ruby">        book4 = Book.create(title: &quot;Blah4&quot;, genre_id: genre.id)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="113">
           <span class="hits">1</span>
           
-          <code class="ruby">        expect(User.find(user.id).genre_badges[0].title).to eq &#39;genre champion&#39;</code>
+          <code class="ruby">        book5 = Book.create(title: &quot;Blah5&quot;, genre_id: genre.id)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="114">
@@ -6258,28 +6330,28 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="115">
+        <li class="covered" data-hits="1" data-linenumber="115">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">      end</code>
+          <code class="ruby">        UserBook.create(user_id: user.id, book_id: book.id)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="116">
+        <li class="covered" data-hits="1" data-linenumber="116">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">        UserBook.create(user_id: user.id, book_id: book2.id)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="117">
           <span class="hits">1</span>
           
-          <code class="ruby">      it &#39;creates genre explorer badge when user adds book and has 5 books of dif genres&#39; do</code>
+          <code class="ruby">        UserBook.create(user_id: user.id, book_id: book3.id)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="118">
           <span class="hits">1</span>
           
-          <code class="ruby">        user = User.create(email: &#39;email@email.com&#39;, password: &quot;blahblah&quot;, password_confirmation: &quot;blahblah&quot;, uid: &quot;email@email.com&quot;)</code>
+          <code class="ruby">        UserBook.create(user_id: user.id, book_id: book4.id)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="119">
@@ -6288,34 +6360,34 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="120">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="120">
           
-          <code class="ruby">        genre = Genre.create(name: &quot;Fiction&quot;)</code>
+          
+          <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="121">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="121">
           
-          <code class="ruby">        genre2 = Genre.create(name: &quot;History&quot;)</code>
+          
+          <code class="ruby">        # subject = Subject.create(name: &quot;Fantasy&quot;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="122">
           <span class="hits">1</span>
           
-          <code class="ruby">        genre3 = Genre.create(name: &quot;Sci fi&quot;)</code>
+          <code class="ruby">        genre_badge = GenreBadge.create(genre_name: &quot;Fiction&quot;, bulk_badge: true, title: &#39;genre champion&#39;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="123">
           <span class="hits">1</span>
           
-          <code class="ruby">        genre4 = Genre.create(name: &quot;Biography&quot;)</code>
+          <code class="ruby">        auth_headers = user.create_new_auth_token</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="124">
           <span class="hits">1</span>
           
-          <code class="ruby">        genre5 = Genre.create(name: &quot;nonfiction&quot;)</code>
+          <code class="ruby">        request.headers.merge!(auth_headers)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="125">
@@ -6324,94 +6396,94 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="126">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="126">
           
-          <code class="ruby">        book = Book.create(title: &quot;Blah&quot;, genre_id: genre.id)</code>
+          
+          <code class="ruby">        # book.subjects &lt;&lt; subject</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="127">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="127">
           
-          <code class="ruby">        book2 = Book.create(title: &quot;Blah2&quot;, genre_id: genre2.id)</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="128">
           <span class="hits">1</span>
           
-          <code class="ruby">        book3 = Book.create(title: &quot;Blah3&quot;, genre_id: genre3.id)</code>
+          <code class="ruby">        post :add_book, {book_id: book5.id, user_id: user.id}, auth_headers</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="129">
           <span class="hits">1</span>
           
-          <code class="ruby">        book4 = Book.create(title: &quot;Blah4&quot;, genre_id: genre4.id)</code>
+          <code class="ruby">        expect(User.find(user.id).genre_badges[0].title).to eq &#39;genre champion&#39;</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="130">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="130">
           
-          <code class="ruby">        book5 = Book.create(title: &quot;Blah5&quot;, genre_id: genre5.id)</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="131">
           
           
-          <code class="ruby"></code>
+          <code class="ruby">      end</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="132">
-          <span class="hits">1</span>
+        <li class="never" data-hits="" data-linenumber="132">
           
-          <code class="ruby">        UserBook.create(user_id: user.id, book_id: book.id)</code>
+          
+          <code class="ruby"></code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="133">
           <span class="hits">1</span>
           
-          <code class="ruby">        UserBook.create(user_id: user.id, book_id: book2.id)</code>
+          <code class="ruby">      it &#39;creates genre explorer badge when user adds book and has 5 books of dif genres&#39; do</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="134">
           <span class="hits">1</span>
           
-          <code class="ruby">        UserBook.create(user_id: user.id, book_id: book3.id)</code>
+          <code class="ruby">        user = User.create(email: &#39;email@email.com&#39;, password: &quot;blahblah&quot;, password_confirmation: &quot;blahblah&quot;, uid: &quot;email@email.com&quot;)</code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="135">
-          <span class="hits">1</span>
-          
-          <code class="ruby">        UserBook.create(user_id: user.id, book_id: book4.id)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="136">
+        <li class="never" data-hits="" data-linenumber="135">
           
           
           <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="136">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        genre = Genre.create(name: &quot;Fiction&quot;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="137">
           <span class="hits">1</span>
           
-          <code class="ruby">        genre_badge = GenreBadge.create(explorer_badge: true, title: &#39;genre explorer&#39;)</code>
+          <code class="ruby">        genre2 = Genre.create(name: &quot;History&quot;)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="138">
+        <li class="covered" data-hits="1" data-linenumber="138">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">        genre3 = Genre.create(name: &quot;Sci fi&quot;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="139">
           <span class="hits">1</span>
           
-          <code class="ruby">        auth_headers = user.create_new_auth_token</code>
+          <code class="ruby">        genre4 = Genre.create(name: &quot;Biography&quot;)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="140">
           <span class="hits">1</span>
           
-          <code class="ruby">        request.headers.merge!(auth_headers)</code>
+          <code class="ruby">        genre5 = Genre.create(name: &quot;nonfiction&quot;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="141">
@@ -6423,46 +6495,142 @@
         <li class="covered" data-hits="1" data-linenumber="142">
           <span class="hits">1</span>
           
-          <code class="ruby">        post :add_book, {book_id: book5.id, user_id: user.id}, auth_headers</code>
+          <code class="ruby">        book = Book.create(title: &quot;Blah&quot;, genre_id: genre.id)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="143">
+        <li class="covered" data-hits="1" data-linenumber="143">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">        book2 = Book.create(title: &quot;Blah2&quot;, genre_id: genre2.id)</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="144">
           <span class="hits">1</span>
           
-          <code class="ruby">        expect(User.find(user.id).genre_badges[0].title).to eq &#39;genre explorer&#39;</code>
+          <code class="ruby">        book3 = Book.create(title: &quot;Blah3&quot;, genre_id: genre3.id)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="145">
+        <li class="covered" data-hits="1" data-linenumber="145">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby"></code>
+          <code class="ruby">        book4 = Book.create(title: &quot;Blah4&quot;, genre_id: genre4.id)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="146">
+        <li class="covered" data-hits="1" data-linenumber="146">
+          <span class="hits">1</span>
           
-          
-          <code class="ruby">      end</code>
+          <code class="ruby">        book5 = Book.create(title: &quot;Blah5&quot;, genre_id: genre5.id)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="147">
           
           
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="148">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        UserBook.create(user_id: user.id, book_id: book.id)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="149">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        UserBook.create(user_id: user.id, book_id: book2.id)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="150">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        UserBook.create(user_id: user.id, book_id: book3.id)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="151">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        UserBook.create(user_id: user.id, book_id: book4.id)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="152">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="153">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        genre_badge = GenreBadge.create(explorer_badge: true, title: &#39;genre explorer&#39;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="154">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="155">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        auth_headers = user.create_new_auth_token</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="156">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        request.headers.merge!(auth_headers)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="157">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="158">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        post :add_book, {book_id: book5.id, user_id: user.id}, auth_headers</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="159">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="160">
+          <span class="hits">1</span>
+          
+          <code class="ruby">        expect(User.find(user.id).genre_badges[0].title).to eq &#39;genre explorer&#39;</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="161">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="162">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="163">
+          
+          
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="148">
+        <li class="never" data-hits="" data-linenumber="164">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="149">
+        <li class="never" data-hits="" data-linenumber="165">
           
           
           <code class="ruby">end</code>
