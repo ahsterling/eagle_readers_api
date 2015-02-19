@@ -63,6 +63,8 @@ class UsersController < ApplicationController
           new_badge = UserGenreBadge.create(user_id: user.id, genre_badge_id: badge.id)
         elsif user.has_genre_badge?(badge.genre_name)
           new_badge = UserGenreBadge.create(user_id: user.id, genre_badge_id: badge.id)
+        else
+          new_badge = false
         end
         new_badge ? badges_earned << new_badge.genre_badge : nil
       end
