@@ -87,7 +87,7 @@ describe UsersController do
         expect(User.find(user.id).genre_badges.count).to eq 1
       end
 
-      it 'doesnt create another badge when user has already earned it' do
+      it 'does not create another badge when user has already earned it' do
         user = User.create(email: 'email@email.com', password: "blahblah", password_confirmation: "blahblah", uid: "email@email.com")
         genre = Genre.create(name: "Fiction")
         book = Book.create(title: "Blah", genre_id: genre.id)

@@ -8,7 +8,7 @@
 
 genres = [
   {name: "Music", title: "Play It Again, Reader!", description: "Read a book about music", image: "app/assets/images/badge_icons/music.png", bulk_image: "app/assets/images/badge_icons/music_bulk.png"},
-  {name:'Eagles Read', title: "Eagles Reads Rock", description: 'Read an Eagles Read book', image: "app/assets/images/badge_icons/eagle.png", bulk_image: "app/assets/images/badge_icons/eagle_bulk.png"},
+  {name: 'Eagles Read', title: "Eagles Reads Rock", description: 'Read an Eagles Read book', image: "app/assets/images/badge_icons/eagle.png", bulk_image: "app/assets/images/badge_icons/eagle_bulk.png"},
   {name: "Fantasy", title: "Unbelievable!", description: 'Read a fantasy book', image: "app/assets/images/badge_icons/fantasy.png", bulk_image: "app/assets/images/badge_icons/fantasy_bulk.png"},
   {name: "Science Fiction", title: "To Infinity and Beyond!", description: "Read a science fiction book", image: "app/assets/images/badge_icons/scifi.png", bulk_image: "app/assets/images/badge_icons/scifi_bulk.png"},
   {name: "Historical Fiction", title: "Can You Imagine It?", description: "Read a historical fiction", image: "app/assets/images/badge_icons/hist_fic.png", bulk_image: "app/assets/images/badge_icons/hist_fic_bulk.png"},
@@ -20,7 +20,7 @@ genres = [
   {name: "Poetry", title: "Poetry Slam", description: "Read a poetry book", image: "app/assets/images/badge_icons/poetry.png", bulk_image: "app/assets/images/badge_icons/poetry_bulk.png"},
   {name: "Graphic Novel", title: "Comic Extravaganza", description: "Read a graphic novel", image: "app/assets/images/badge_icons/comics.png", bulk_image: "app/assets/images/badge_icons/comics_bulk.png"},
   {name: "Biography", title: "#truestory", description: "Read a biography", image: "app/assets/images/badge_icons/biography.png", bulk_image: "app/assets/images/badge_icons/biography_bulk.png"},
-  {name: "Bistory", title: "Tell Me About It", description: "Read a book about history", image: "app/assets/images/badge_icons/history.png", bulk_image: "app/assets/images/badge_icons/history_bulk.png"},
+  {name: "History", title: "Tell Me About It", description: "Read a book about history", image: "app/assets/images/badge_icons/history.png", bulk_image: "app/assets/images/badge_icons/history_bulk.png"},
   {name: "Mythology and Folktales", title: "Mythbusters", description: "Read a book about mythology or folktales", image: "app/assets/images/badge_icons/mythology.png", bulk_image: "app/assets/images/badge_icons/mythology_bulk.png"},
   {name: "Sports", title: "Go Team!", description: "Read a book about sports", image: "app/assets/images/badge_icons/sports.png", bulk_image: "app/assets/images/badge_icons/sports_bulk.png"},
   {name: "Science", title: "Mad Scientist", description: "Read a book about science", image: "app/assets/images/badge_icons/science.png", bulk_image: "app/assets/images/badge_icons/science_bulk.png"},
@@ -166,7 +166,7 @@ for record in reader
   #   book.genre_id = Genre.find_by(name: 'non-fiction/other')
   # else
   if book.subject_array.count == 0
-    book.genre_id = Genre.find_by(name: "non-fiction/other").id
+    book.genre_id = Genre.find_by(name: "Nonfiction and Other").id
   else
     if book.subject_array.grep(/fantasy/i).count > 0 || book.subject_array.grep(/fantastical/i).count > 0
       book.genre_id = Genre.find_by(name: "Fantasy").id
