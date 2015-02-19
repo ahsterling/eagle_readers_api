@@ -14,27 +14,27 @@
       <img src="./assets/0.8.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-02-18T11:55:27-08:00">2015-02-18T11:55:27-08:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-02-19T09:55:34-08:00">2015-02-19T09:55:34-08:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">97.8%</span></span>
+    (<span class="covered_percent"><span class="green">97.11%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         6.42
+         6.36
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>37</b> files in total.
-    <b>546</b> relevant lines. 
-    <span class="green"><b>534</b> lines covered</span> and
-    <span class="red"><b>12</b> lines missed </span>
+    <b>553</b> relevant lines. 
+    <span class="green"><b>537</b> lines covered</span> and
+    <span class="red"><b>16</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -102,11 +102,11 @@
       
       <tr>
         <td class="strong"><a href="#ae27903e93a8ab7a73836a84b35675b4ee12ae23" class="src_link" title="app/controllers/users_controller.rb">app/controllers/users_controller.rb</a></td>
-        <td class="green strong">97.62 %</td>
-        <td>75</td>
-        <td>42</td>
-        <td>41</td>
-        <td>1</td>
+        <td class="yellow strong">90.0 %</td>
+        <td>121</td>
+        <td>50</td>
+        <td>45</td>
+        <td>5</td>
         <td>1.8</td>
       </tr>
       
@@ -192,10 +192,10 @@
       
       <tr>
         <td class="strong"><a href="#cedbf0d7f42374299f330cecbaa821a60ffaf84c" class="src_link" title="app/uploaders/image_uploader.rb">app/uploaders/image_uploader.rb</a></td>
-        <td class="green strong">91.67 %</td>
-        <td>64</td>
-        <td>12</td>
-        <td>11</td>
+        <td class="yellow strong">90.0 %</td>
+        <td>60</td>
+        <td>10</td>
+        <td>9</td>
         <td>1</td>
         <td>0.9</td>
       </tr>
@@ -283,11 +283,11 @@
       <tr>
         <td class="strong"><a href="#3e77dfe236ba05e8d5cd9a608fa80f2c28fb61fa" class="src_link" title="config/initializers/site_config.rb">config/initializers/site_config.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>11</td>
-        <td>7</td>
-        <td>7</td>
+        <td>12</td>
+        <td>8</td>
+        <td>8</td>
         <td>0</td>
-        <td>402.9</td>
+        <td>352.6</td>
       </tr>
       
       <tr>
@@ -997,11 +997,11 @@
         <div class="source_table" id="ae27903e93a8ab7a73836a84b35675b4ee12ae23">
   <div class="header">
     <h3>app/controllers/users_controller.rb</h3>
-    <h4><span class="green">97.62 %</span> covered</h4>
+    <h4><span class="yellow">90.0 %</span> covered</h4>
     <div>
-      <b>42</b> relevant lines. 
-      <span class="green"><b>41</b> lines covered</span> and
-      <span class="red"><b>1</b> lines missed.</span>
+      <b>50</b> relevant lines. 
+      <span class="green"><b>45</b> lines covered</span> and
+      <span class="red"><b>5</b> lines missed.</span>
     </div>
   </div>
   
@@ -1221,229 +1221,229 @@
         <li class="covered" data-hits="4" data-linenumber="36">
           <span class="hits">4</span>
           
-          <code class="ruby">    badges_earned = []</code>
+          <code class="ruby">    badges_earned = get_badges(user.id)</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="37">
-          <span class="hits">4</span>
-          
-          <code class="ruby">    GenreBadge.all.each do |badge|</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="38">
+        <li class="never" data-hits="" data-linenumber="37">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="5" data-linenumber="39">
-          <span class="hits">5</span>
-          
-          <code class="ruby">      unless user.already_has_badge(badge.id)</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="40">
-          
-          
-          <code class="ruby">      # check for bulk badges</code>
-        </li>
-      
-        <li class="covered" data-hits="5" data-linenumber="41">
-          <span class="hits">5</span>
-          
-          <code class="ruby">        if badge.bulk_badge == true</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="42">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          if user.has_bulk_genre_badge?(badge.genre_name)</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="43">
-          <span class="hits">1</span>
-          
-          <code class="ruby">            bulk_badge = UserGenreBadge.create(user_id: user.id, genre_badge_id: badge.id)</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="44">
-          <span class="hits">1</span>
-          
-          <code class="ruby">            badges_earned &lt;&lt; bulk_badge</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="45">
-          
-          
-          <code class="ruby">          end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="46">
-          
-          
-          <code class="ruby">        # check for explorer badges</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="47">
-          
-          
-          <code class="ruby">        elsif badge.explorer_badge == true</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="48">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          if user.has_genre_explorer_badge?</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="49">
-          <span class="hits">1</span>
-          
-          <code class="ruby">            explorer_badge = UserGenreBadge.create(user_id: user.id, genre_badge_id: badge.id)</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="50">
-          <span class="hits">1</span>
-          
-          <code class="ruby">            badges_earned &lt;&lt; explorer_badge</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="51">
-          
-          
-          <code class="ruby">          end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="52">
-          
-          
-          <code class="ruby">        # check for standard genre badges</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="53">
-          
-          
-          <code class="ruby">        elsif user.has_genre_badge?(badge.genre_name)</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="54">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          badge = UserGenreBadge.create(user_id: user.id, genre_badge_id: badge.id)</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="55">
-          <span class="hits">1</span>
-          
-          <code class="ruby">          badges_earned &lt;&lt; badge</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="56">
-          
-          
-          <code class="ruby">        end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="57">
-          
-          
-          <code class="ruby">      end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="58">
-          
-          
-          <code class="ruby">    end</code>
-        </li>
-      
-        <li class="covered" data-hits="4" data-linenumber="59">
+        <li class="covered" data-hits="4" data-linenumber="38">
           <span class="hits">4</span>
           
           <code class="ruby">    book = Book.find(params[:book_id])</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="60">
+        <li class="covered" data-hits="4" data-linenumber="39">
           <span class="hits">4</span>
           
           <code class="ruby">    response = {</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="61">
+        <li class="never" data-hits="" data-linenumber="40">
           
           
           <code class="ruby">      book: book.title,</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="62">
+        <li class="never" data-hits="" data-linenumber="41">
           
           
           <code class="ruby">      badges: []</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="63">
+        <li class="never" data-hits="" data-linenumber="42">
           
           
           <code class="ruby">    }</code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="64">
+        <li class="covered" data-hits="4" data-linenumber="43">
           <span class="hits">4</span>
           
           <code class="ruby">    badges_earned.each do |badge|</code>
         </li>
       
-        <li class="covered" data-hits="3" data-linenumber="65">
+        <li class="covered" data-hits="3" data-linenumber="44">
           <span class="hits">3</span>
           
           <code class="ruby">      response[:badges] &lt;&lt; badge.genre_badge</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="66">
+        <li class="never" data-hits="" data-linenumber="45">
           
           
           <code class="ruby">    end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="67">
+        <li class="never" data-hits="" data-linenumber="46">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="4" data-linenumber="68">
+        <li class="covered" data-hits="4" data-linenumber="47">
           <span class="hits">4</span>
           
           <code class="ruby">    render json: response.as_json</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="69">
+        <li class="never" data-hits="" data-linenumber="48">
           
           
           <code class="ruby">  end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="70">
+        <li class="never" data-hits="" data-linenumber="49">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="71">
+        <li class="covered" data-hits="1" data-linenumber="50">
           <span class="hits">1</span>
           
           <code class="ruby">  def usernames</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="72">
+        <li class="missed" data-hits="0" data-linenumber="51">
           
           
           <code class="ruby">    render json: USERNAMES.as_json</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="73">
+        <li class="never" data-hits="" data-linenumber="52">
           
           
           <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="53">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="54">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  private</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="55">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="56">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def get_badges(user_id)</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="57">
+          <span class="hits">4</span>
+          
+          <code class="ruby">    user = User.find(user_id)</code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="58">
+          <span class="hits">4</span>
+          
+          <code class="ruby">    badges_earned = []</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="59">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="4" data-linenumber="60">
+          <span class="hits">4</span>
+          
+          <code class="ruby">    GenreBadge.all.each do |badge|</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="61">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="62">
+          <span class="hits">5</span>
+          
+          <code class="ruby">      unless user.already_has_badge(badge.id)</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="63">
+          <span class="hits">5</span>
+          
+          <code class="ruby">        if badge.bulk_badge == true &amp;&amp; user.has_bulk_genre_badge?(badge.genre_name)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="64">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          new_badge = UserGenreBadge.create(user_id: user.id, genre_badge_id: badge.id)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="65">
+          
+          
+          <code class="ruby">        elsif badge.explorer_badge == true &amp;&amp; user.has_genre_explorer_badge?</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="66">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          new_badge = UserGenreBadge.create(user_id: user.id, genre_badge_id: badge.id)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="67">
+          
+          
+          <code class="ruby">        elsif user.has_genre_badge?(badge.genre_name)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="68">
+          <span class="hits">1</span>
+          
+          <code class="ruby">          new_badge = UserGenreBadge.create(user_id: user.id, genre_badge_id: badge.id)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="69">
+          
+          
+          <code class="ruby">        end</code>
+        </li>
+      
+        <li class="covered" data-hits="5" data-linenumber="70">
+          <span class="hits">5</span>
+          
+          <code class="ruby">        new_badge ? badges_earned &lt;&lt; new_badge : nil</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="71">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="72">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="73">
+          
+          
+          <code class="ruby">    end</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="74">
@@ -1452,7 +1452,283 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="75">
+        <li class="covered" data-hits="4" data-linenumber="75">
+          <span class="hits">4</span>
+          
+          <code class="ruby">    return badges_earned</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="76">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="77">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="78">
+          
+          
+          <code class="ruby">      # check for bulk badges</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="79">
+          
+          
+          <code class="ruby">        # if badge.bulk_badge == true</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="80">
+          
+          
+          <code class="ruby">        #   if user.has_bulk_genre_badge?(badge.genre_name)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="81">
+          
+          
+          <code class="ruby">        #     bulk_badge = UserGenreBadge.create(user_id: user.id, genre_badge_id: badge.id)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="82">
+          
+          
+          <code class="ruby">        #     badges_earned &lt;&lt; bulk_badge</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="83">
+          
+          
+          <code class="ruby">        #   end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="84">
+          
+          
+          <code class="ruby">        # badges_earned &lt;&lt; user.check_explorer_badge</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="85">
+          
+          
+          <code class="ruby">        # check for explorer badges</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="86">
+          
+          
+          <code class="ruby">        # elsif badge.explorer_badge == true</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="87">
+          
+          
+          <code class="ruby">        #   if user.has_genre_explorer_badge?</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="88">
+          
+          
+          <code class="ruby">        #     explorer_badge = UserGenreBadge.create(user_id: user.id, genre_badge_id: badge.id)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="89">
+          
+          
+          <code class="ruby">        #     badges_earned &lt;&lt; explorer_badge</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="90">
+          
+          
+          <code class="ruby">        #   end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="91">
+          
+          
+          <code class="ruby">        #</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="92">
+          
+          
+          <code class="ruby">        # # check for standard genre badges</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="93">
+          
+          
+          <code class="ruby">        # elsif user.has_genre_badge?(badge.genre_name)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="94">
+          
+          
+          <code class="ruby">        #   badge = UserGenreBadge.create(user_id: user.id, genre_badge_id: badge.id)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="95">
+          
+          
+          <code class="ruby">        #   badges_earned &lt;&lt; badge</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="96">
+          
+          
+          <code class="ruby">        # end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="97">
+          
+          
+          <code class="ruby">      # end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="98">
+          
+          
+          <code class="ruby">    # end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="99">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="100">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="101">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="102">
+          
+          
+          <code class="ruby">  # end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="103">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="104">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def check_bulk_badge</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="105">
+          
+          
+          <code class="ruby">    if badge.bulk_badge == true</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="106">
+          
+          
+          <code class="ruby">      if user.has_bulk_genre_badge?(badge.genre_name)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="107">
+          
+          
+          <code class="ruby">        bulk_badge = UserGenreBadge.create(user_id: user.id, genre_badge_id: badge.id)</code>
+        </li>
+      
+        <li class="missed" data-hits="0" data-linenumber="108">
+          
+          
+          <code class="ruby">        return bulk_badge</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="109">
+          
+          
+          <code class="ruby">      end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="110">
+          
+          
+          <code class="ruby">    end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="111">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="112">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="113">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="114">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def earns_explorer_badge?</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="115">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="116">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="117">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  def earns_genre_badge?</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="118">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="119">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="120">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="121">
           
           
           <code class="ruby">end</code>
@@ -2419,10 +2695,10 @@
         <div class="source_table" id="cedbf0d7f42374299f330cecbaa821a60ffaf84c">
   <div class="header">
     <h3>app/uploaders/image_uploader.rb</h3>
-    <h4><span class="green">91.67 %</span> covered</h4>
+    <h4><span class="yellow">90.0 %</span> covered</h4>
     <div>
-      <b>12</b> relevant lines. 
-      <span class="green"><b>11</b> lines covered</span> and
+      <b>10</b> relevant lines. 
+      <span class="green"><b>9</b> lines covered</span> and
       <span class="red"><b>1</b> lines missed.</span>
     </div>
   </div>
@@ -2643,7 +2919,7 @@
         <li class="covered" data-hits="1" data-linenumber="36">
           <span class="hits">1</span>
           
-          <code class="ruby">    process :resize_to_fit =&gt; [50, 50]</code>
+          <code class="ruby">    process :resize_to_fit =&gt; [75, 75]</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="37">
@@ -2667,7 +2943,7 @@
         <li class="covered" data-hits="1" data-linenumber="40">
           <span class="hits">1</span>
           
-          <code class="ruby">    process :resize_to_fit =&gt; [100, 100]</code>
+          <code class="ruby">    process :resize_to_fit =&gt; [150, 150]</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="41">
@@ -2706,109 +2982,85 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="covered" data-hits="1" data-linenumber="47">
-          <span class="hits">1</span>
-          
-          <code class="ruby">  version :full do</code>
-        </li>
-      
-        <li class="covered" data-hits="1" data-linenumber="48">
-          <span class="hits">1</span>
-          
-          <code class="ruby">    process :resize_to_fit =&gt; [1200, 1200]</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="49">
-          
-          
-          <code class="ruby">  end</code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="50">
+        <li class="never" data-hits="" data-linenumber="47">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="51">
-          
-          
-          <code class="ruby"></code>
-        </li>
-      
-        <li class="never" data-hits="" data-linenumber="52">
+        <li class="never" data-hits="" data-linenumber="48">
           
           
           <code class="ruby">  # Add a white list of extensions which are allowed to be uploaded.</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="53">
+        <li class="never" data-hits="" data-linenumber="49">
           
           
           <code class="ruby">  # For images you might use something like this:</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="54">
+        <li class="never" data-hits="" data-linenumber="50">
           
           
           <code class="ruby">  # def extension_white_list</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="55">
+        <li class="never" data-hits="" data-linenumber="51">
           
           
           <code class="ruby">  #   %w(jpg jpeg gif png)</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="56">
+        <li class="never" data-hits="" data-linenumber="52">
           
           
           <code class="ruby">  # end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="57">
+        <li class="never" data-hits="" data-linenumber="53">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="58">
+        <li class="never" data-hits="" data-linenumber="54">
           
           
           <code class="ruby">  # Override the filename of the uploaded files:</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="59">
+        <li class="never" data-hits="" data-linenumber="55">
           
           
           <code class="ruby">  # Avoid using model.id or version_name here, see uploader/store.rb for details.</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="60">
+        <li class="never" data-hits="" data-linenumber="56">
           
           
           <code class="ruby">  # def filename</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="61">
+        <li class="never" data-hits="" data-linenumber="57">
           
           
           <code class="ruby">  #   &quot;something.jpg&quot; if original_filename</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="62">
+        <li class="never" data-hits="" data-linenumber="58">
           
           
           <code class="ruby">  # end</code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="63">
+        <li class="never" data-hits="" data-linenumber="59">
           
           
           <code class="ruby"></code>
         </li>
       
-        <li class="never" data-hits="" data-linenumber="64">
+        <li class="never" data-hits="" data-linenumber="60">
           
           
           <code class="ruby">end</code>
@@ -3027,7 +3279,7 @@
         <li class="covered" data-hits="1" data-linenumber="33">
           <span class="hits">1</span>
           
-          <code class="ruby">        origins &#39;http://localhost:8000&#39;, &#39;54.186.52.32&#39;</code>
+          <code class="ruby">        origins &#39;http://localhost:8000&#39;, &#39;54.186.52.32&#39;, &#39;http://www.eaglereaders.com&#39;</code>
         </li>
       
         <li class="covered" data-hits="1" data-linenumber="34">
@@ -3993,8 +4245,8 @@
     <h3>config/initializers/site_config.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>7</b> relevant lines. 
-      <span class="green"><b>7</b> lines covered</span> and
+      <b>8</b> relevant lines. 
+      <span class="green"><b>8</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -4066,6 +4318,12 @@
           <span class="hits">1</span>
           
           <code class="ruby">USERNAMES &lt;&lt; &quot;test&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="12">
+          <span class="hits">1</span>
+          
+          <code class="ruby">USERNAMES &lt;&lt; &quot;admin&quot;</code>
         </li>
       
     </ol>
