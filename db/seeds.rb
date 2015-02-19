@@ -7,24 +7,24 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 genres = [
-  {name: "music", title: "Play It Again, Reader!", description: "Read a book about music", image: "app/assets/images/badge_icons/music.png", bulk_image: "app/assets/images/badge_icons/music_bulk.png"},
-  {name:'eagles read', title: "Eagles Reads Rock", description: 'Read an Eagles Read book', image: "app/assets/images/badge_icons/eagle.png", bulk_image: "app/assets/images/badge_icons/eagle_bulk.png"},
-  {name: "fantasy", title: "Unbelievable!", description: 'Read a fantasy book', image: "app/assets/images/badge_icons/fantasy.png", bulk_image: "app/assets/images/badge_icons/fantasy_bulk.png"},
-  {name: "science fiction", title: "To Infinity and Beyond!", description: "Read a science fiction book", image: "app/assets/images/badge_icons/scifi.png", bulk_image: "app/assets/images/badge_icons/scifi_bulk.png"},
-  {name: "historical fiction", title: "Can You Imagine It?", description: "Read a historical fiction", image: "app/assets/images/badge_icons/hist_fic.png", bulk_image: "app/assets/images/badge_icons/hist_fic_bulk.png"},
-  {name: "mystery", title: "Whodunnit?", description: "Read a mystery", image: "app/assets/images/badge_icons/mystery.png", bulk_image: "app/assets/images/badge_icons/mystery_bulk.png"},
-  {name: "horror", title: "Eeeek!", description: "Read a horror book", image: "app/assets/images/badge_icons/horror.png", bulk_image: "app/assets/images/badge_icons/horror_bulk.png"},
-  {name: "adventure", title: "Here We Go!", description: "Read an adventure book", image: "app/assets/images/badge_icons/adventure.png", bulk_image: "app/assets/images/badge_icons/adventure_bulk.png"},
-  {name: "fiction", title: "Tell Me A Story", description: "Read a fiction book", image: "app/assets/images/badge_icons/fiction.png", bulk_image: "app/assets/images/badge_icons/fiction_bulk.png"},
-  {name: "animals", title: "Animal Ranger", description: "Read a book about animals", image: "app/assets/images/badge_icons/animal.png", bulk_image: "app/assets/images/badge_icons/animal_bulk.png"},
-  {name: "poetry", title: "Poetry Slam", description: "Read a poetry book", image: "app/assets/images/badge_icons/poetry.png", bulk_image: "app/assets/images/badge_icons/poetry_bulk.png"},
-  {name: "graphic novel", title: "Comic Extravaganza", description: "Read a graphic novel", image: "app/assets/images/badge_icons/comics.png", bulk_image: "app/assets/images/badge_icons/comics_bulk.png"},
-  {name: "biography", title: "#truestory", description: "Read a biography", image: "app/assets/images/badge_icons/biography.png", bulk_image: "app/assets/images/badge_icons/biography_bulk.png"},
-  {name: "history", title: "Tell Me About It", description: "Read a book about history", image: "app/assets/images/badge_icons/history.png", bulk_image: "app/assets/images/badge_icons/history_bulk.png"},
-  {name: "mythology/folktales", title: "Mythbusters", description: "Read a book about mythology or folktales", image: "app/assets/images/badge_icons/mythology.png", bulk_image: "app/assets/images/badge_icons/mythology_bulk.png"},
-  {name: "sports", title: "Go Team!", description: "Read a book about sports", image: "app/assets/images/badge_icons/sports.png", bulk_image: "app/assets/images/badge_icons/sports_bulk.png"},
-  {name: "science", title: "Mad Scientist", description: "Read a book about science", image: "app/assets/images/badge_icons/science.png", bulk_image: "app/assets/images/badge_icons/science_bulk.png"},
-  {name: "non-fiction/other", title: "I didn't know that . .  ", description: "Read a non-fiction book", image: "app/assets/images/badge_icons/nonfiction.png", bulk_image: "app/assets/images/badge_icons/nonfiction_bulk.png"}
+  {name: "Music", title: "Play It Again, Reader!", description: "Read a book about music", image: "app/assets/images/badge_icons/music.png", bulk_image: "app/assets/images/badge_icons/music_bulk.png"},
+  {name:'Eagles Read', title: "Eagles Reads Rock", description: 'Read an Eagles Read book', image: "app/assets/images/badge_icons/eagle.png", bulk_image: "app/assets/images/badge_icons/eagle_bulk.png"},
+  {name: "Fantasy", title: "Unbelievable!", description: 'Read a fantasy book', image: "app/assets/images/badge_icons/fantasy.png", bulk_image: "app/assets/images/badge_icons/fantasy_bulk.png"},
+  {name: "Science Fiction", title: "To Infinity and Beyond!", description: "Read a science fiction book", image: "app/assets/images/badge_icons/scifi.png", bulk_image: "app/assets/images/badge_icons/scifi_bulk.png"},
+  {name: "Historical Fiction", title: "Can You Imagine It?", description: "Read a historical fiction", image: "app/assets/images/badge_icons/hist_fic.png", bulk_image: "app/assets/images/badge_icons/hist_fic_bulk.png"},
+  {name: "Mystery", title: "Whodunnit?", description: "Read a mystery", image: "app/assets/images/badge_icons/mystery.png", bulk_image: "app/assets/images/badge_icons/mystery_bulk.png"},
+  {name: "Horror", title: "Eeeek!", description: "Read a horror book", image: "app/assets/images/badge_icons/horror.png", bulk_image: "app/assets/images/badge_icons/horror_bulk.png"},
+  {name: "Adventure", title: "Here We Go!", description: "Read an adventure book", image: "app/assets/images/badge_icons/adventure.png", bulk_image: "app/assets/images/badge_icons/adventure_bulk.png"},
+  {name: "Fiction", title: "Tell Me A Story", description: "Read a fiction book", image: "app/assets/images/badge_icons/fiction.png", bulk_image: "app/assets/images/badge_icons/fiction_bulk.png"},
+  {name: "Animals", title: "Animal Ranger", description: "Read a book about animals", image: "app/assets/images/badge_icons/animal.png", bulk_image: "app/assets/images/badge_icons/animal_bulk.png"},
+  {name: "Poetry", title: "Poetry Slam", description: "Read a poetry book", image: "app/assets/images/badge_icons/poetry.png", bulk_image: "app/assets/images/badge_icons/poetry_bulk.png"},
+  {name: "Graphic Novel", title: "Comic Extravaganza", description: "Read a graphic novel", image: "app/assets/images/badge_icons/comics.png", bulk_image: "app/assets/images/badge_icons/comics_bulk.png"},
+  {name: "Biography", title: "#truestory", description: "Read a biography", image: "app/assets/images/badge_icons/biography.png", bulk_image: "app/assets/images/badge_icons/biography_bulk.png"},
+  {name: "Bistory", title: "Tell Me About It", description: "Read a book about history", image: "app/assets/images/badge_icons/history.png", bulk_image: "app/assets/images/badge_icons/history_bulk.png"},
+  {name: "Mythology and Folktales", title: "Mythbusters", description: "Read a book about mythology or folktales", image: "app/assets/images/badge_icons/mythology.png", bulk_image: "app/assets/images/badge_icons/mythology_bulk.png"},
+  {name: "Sports", title: "Go Team!", description: "Read a book about sports", image: "app/assets/images/badge_icons/sports.png", bulk_image: "app/assets/images/badge_icons/sports_bulk.png"},
+  {name: "Science", title: "Mad Scientist", description: "Read a book about science", image: "app/assets/images/badge_icons/science.png", bulk_image: "app/assets/images/badge_icons/science_bulk.png"},
+  {name: "Nonfiction and Other", title: "I didn't know that . .  ", description: "Read a non-fiction book", image: "app/assets/images/badge_icons/nonfiction.png", bulk_image: "app/assets/images/badge_icons/nonfiction_bulk.png"}
 ]
 
 genres.each do |genre|
@@ -169,39 +169,39 @@ for record in reader
     book.genre_id = Genre.find_by(name: "non-fiction/other").id
   else
     if book.subject_array.grep(/fantasy/i).count > 0 || book.subject_array.grep(/fantastical/i).count > 0
-      book.genre_id = Genre.find_by(name: "fantasy").id
+      book.genre_id = Genre.find_by(name: "Fantasy").id
     elsif book.subject_array.grep(/science fic/i).count > 0
-      book.genre_id = Genre.find_by(name: "science fiction").id
+      book.genre_id = Genre.find_by(name: "Science Fiction").id
     elsif book.subject_array.grep(/historical f/i).count > 0
-      book.genre_id = Genre.find_by(name: "historical fiction").id
+      book.genre_id = Genre.find_by(name: "Historical Fiction").id
     elsif book.subject_array.grep(/mystery/i).count > 0 || book.subject_array.grep(/suspense/i).count > 0
-      book.genre_id = Genre.find_by(name: "mystery").id
+      book.genre_id = Genre.find_by(name: "Mystery").id
     elsif book.subject_array.grep(/horror/i).count > 0 || book.subject_array.grep(/occult/i).count > 0 || book.subject_array.grep(/paranormal/i).count > 0
-      book.genre_id = Genre.find_by(name: "horror").id
+      book.genre_id = Genre.find_by(name: "Horror").id
     elsif book.subject_array.grep(/adventure/i).count > 0
-      book.genre_id = Genre.find_by(name: "adventure").id
+      book.genre_id = Genre.find_by(name: "Adventure").id
     elsif book.subject_array.grep(/animal/i).count > 0
-      book.genre_id = Genre.find_by(name: "animals").id
+      book.genre_id = Genre.find_by(name: "Animals").id
     elsif book.subject_array.grep(/poetry/i).count > 0
-      book.genre_id = Genre.find_by(name: "poetry").id
+      book.genre_id = Genre.find_by(name: "Poetry").id
     elsif book.subject_array.grep(/comic/i).count > 0 || book.subject_array.grep(/graphic n/i).count > 0
-      book.genre_id = Genre.find_by(name: "graphic novel").id
+      book.genre_id = Genre.find_by(name: "Graphic Novel").id
     elsif book.subject_array.grep(/music/i).count > 0
-      book.genre_id = Genre.find_by(name: "music").id
+      book.genre_id = Genre.find_by(name: "Music").id
     elsif book.subject_array.grep(/biography/i).count > 0
-      book.genre_id = Genre.find_by(name: "biography").id
+      book.genre_id = Genre.find_by(name: "Biography").id
     elsif book.subject_array.grep(/history/i).count > 0
-      book.genre_id = Genre.find_by(name: "history").id
+      book.genre_id = Genre.find_by(name: "History").id
     elsif book.subject_array.grep(/mythology/i).count > 0 || book.subject_array.grep(/folktale/i).count > 0
-      book.genre_id = Genre.find_by(name: "mythology/folktales").id
+      book.genre_id = Genre.find_by(name: "Mythology and Folktales").id
     elsif book.subject_array.grep(/sports/i).count > 0
-      book.genre_id = Genre.find_by(name: "sports").id
+      book.genre_id = Genre.find_by(name: "Sports").id
     elsif book.subject_array.grep(/biology/i).count > 0 || book.subject_array.grep(/chemistry/i).count > 0 || book.subject_array.grep(/physics/i).count > 0 || book.subject_array.grep(/engineering/).count > 0 || book.subject_array.grep(/geology/).count > 0
-      book.genre_id = Genre.find_by(name: "science").id
+      book.genre_id = Genre.find_by(name: "Science").id
     elsif book.subject_array.grep(/fiction/i).count > 0 || book.subject_array.grep(/literature/i).count > 0
-      book.genre_id = Genre.find_by(name: "fiction").id
+      book.genre_id = Genre.find_by(name: "Fiction").id
     else
-      book.genre_id = Genre.find_by(name: "non-fiction/other").id
+      book.genre_id = Genre.find_by(name: "Nonfiction and Other").id
     end
   end
 
