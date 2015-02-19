@@ -36,10 +36,9 @@ class UsersController < ApplicationController
     badges_earned = get_badges(user.id)
 
     book = Book.find(params[:book_id])
-    response = {
-      book: book.title,
-      badges: []
-    }
+
+    response = { book: book, badges: [] }
+
     badges_earned.each do |badge|
       response[:badges] << badge.genre_badge
     end
@@ -73,49 +72,6 @@ class UsersController < ApplicationController
     end
 
     return badges_earned
-  end
-
-      # check for bulk badges
-        # if badge.bulk_badge == true
-        #   if user.has_bulk_genre_badge?(badge.genre_name)
-        #     bulk_badge = UserGenreBadge.create(user_id: user.id, genre_badge_id: badge.id)
-        #     badges_earned << bulk_badge
-        #   end
-        # badges_earned << user.check_explorer_badge
-        # check for explorer badges
-        # elsif badge.explorer_badge == true
-        #   if user.has_genre_explorer_badge?
-        #     explorer_badge = UserGenreBadge.create(user_id: user.id, genre_badge_id: badge.id)
-        #     badges_earned << explorer_badge
-        #   end
-        #
-        # # check for standard genre badges
-        # elsif user.has_genre_badge?(badge.genre_name)
-        #   badge = UserGenreBadge.create(user_id: user.id, genre_badge_id: badge.id)
-        #   badges_earned << badge
-        # end
-      # end
-    # end
-
-
-
-  # end
-
-  def check_bulk_badge
-    if badge.bulk_badge == true
-      if user.has_bulk_genre_badge?(badge.genre_name)
-        bulk_badge = UserGenreBadge.create(user_id: user.id, genre_badge_id: badge.id)
-        return bulk_badge
-      end
-    end
-
-  end
-
-  def earns_explorer_badge?
-  end
-
-  def earns_genre_badge?
-
   end
 
 end
