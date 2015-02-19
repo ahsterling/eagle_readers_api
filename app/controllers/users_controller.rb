@@ -55,13 +55,12 @@ class UsersController < ApplicationController
     badges_earned = []
 
     GenreBadge.all.each do |badge|
-
       unless user.already_has_badge(badge.id)
         if badge.bulk_badge == true && user.has_bulk_genre_badge?(badge.genre_name)
           new_badge = UserGenreBadge.create(user_id: user.id, genre_badge_id: badge.id)
         elsif badge.explorer_badge == true && user.has_genre_explorer_badge?
           new_badge = UserGenreBadge.create(user_id: user.id, genre_badge_id: badge.id)
-        elsif user.has_genre_badge?(badge.genre_name)
+        elsif badge.bulk_badge == nil && user.has_genre_badge?(badge.genre_name)
           new_badge = UserGenreBadge.create(user_id: user.id, genre_badge_id: badge.id)
         else
           new_badge = false
@@ -70,7 +69,6 @@ class UsersController < ApplicationController
       end
 
     end
-
     return badges_earned
   end
 

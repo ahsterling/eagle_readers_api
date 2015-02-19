@@ -77,6 +77,7 @@ describe UsersController do
         book = Book.create(title: "Blah", genre_id: genre.id)
         # subject = Subject.create(name: "Fantasy")
         genre_badge = GenreBadge.create(genre_name: "Fiction")
+        genre_badge = GenreBadge.create(genre_name: "Fiction", bulk_badge: true)
         genre_badge2 = GenreBadge.create(genre_name: "Graphic Novel")
         auth_headers = user.create_new_auth_token
         request.headers.merge!(auth_headers)
