@@ -41,7 +41,6 @@ class UsersController < ApplicationController
     badges_earned.each do |badge|
       response[:badges] << badge
     end
-
     render json: response.as_json
   end
 
