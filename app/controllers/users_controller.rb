@@ -34,13 +34,13 @@ class UsersController < ApplicationController
     UserBook.create( user_id: params[:user_id], book_id: params[:book_id] )
     user = User.find(params[:user_id])
     badges_earned = get_badges(user.id)
-
+    puts badge_earned
     book = Book.find(params[:book_id])
 
     response = { book: book, badges: [] }
 
     badges_earned.each do |badge|
-      response[:badges] << badge.genre_name
+      response[:badges] << badge
     end
 
     render json: response.as_json
