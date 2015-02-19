@@ -1,0 +1,37 @@
+
++BRAKEMAN REPORT+
+
+Application path: /Users/Allie/Ada/capstone/eagle_readers_api
+Rails version: 4.2.0
+Brakeman version: 2.6.3
+Started at 2015-02-19 14:15:22 -0800
+Duration: 0.149664 seconds
+Checks run: BasicAuth, ContentTag, CreateWith, CrossSiteScripting, DefaultRoutes, Deserialize, DetailedExceptions, DigestDoS, EscapeFunction, Evaluation, Execute, FileAccess, FilterSkipping, ForgerySetting, HeaderDoS, I18nXSS, JRubyXML, JSONParsing, LinkTo, LinkToHref, MailTo, MassAssignment, ModelAttrAccessible, ModelAttributes, ModelSerialize, NestedAttributes, NumberToCurrency, QuoteTableName, Redirect, RegexDoS, Render, RenderDoS, ResponseSplitting, SQL, SQLCVEs, SSLVerify, SafeBufferManipulation, SanitizeMethods, SelectTag, SelectVulnerability, Send, SendFile, SessionSettings, SimpleFormat, SingleQuotes, SkipBeforeFilter, StripTags, SymbolDoS, TranslateBug, UnsafeReflection, ValidationRegex, WithoutProtection, YAMLParsing
+
+
++SUMMARY+
+
++-------------------+-------+
+| Scanned/Reported  | Total |
++-------------------+-------+
+| Controllers       | 6     |
+| Models            | 8     |
+| Templates         | 0     |
+| Errors            | 0     |
+| Security Warnings | 1 (1) |
++-------------------+-------+
+
++-----------------+-------+
+| Warning Type    | Total |
++-----------------+-------+
+| Session Setting | 1     |
++-----------------+-------+
+
+
++SECURITY WARNINGS+
+
++------------+-------+--------+-----------------+-----------------------------------------------------------------------+
+| Confidence | Class | Method | Warning Type    | Message                                                               |
++------------+-------+--------+-----------------+-----------------------------------------------------------------------+
+| High       |       |        | Session Setting | Session secret should not be included in version control near line 19 |
++------------+-------+--------+-----------------+-----------------------------------------------------------------------+
