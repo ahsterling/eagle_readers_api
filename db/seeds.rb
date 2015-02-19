@@ -34,7 +34,7 @@ genres.each do |genre|
   src_file = File.new(image_src)
   genre_badge.image = src_file
   genre_badge.save
-  bulk_genre_badge = GenreBadge.create(genre_name: genre[:name], title: "Genre Champion: #{genre[:name]}", bulk_badge: true)
+  bulk_genre_badge = GenreBadge.create(genre_name: genre[:name], title: "Genre Champion: #{genre[:name]}", bulk_badge: true, description: "Read 5 #{genre[:name]} books")
   image_src = File.join(Rails.root, genre[:bulk_image])
   src_file = File.new(image_src)
   bulk_genre_badge.image = src_file
