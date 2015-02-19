@@ -16,5 +16,4 @@
 # Using secret_token for rails3 compatibility. Change to secret_key_base
 # to avoid deprecation warning.
 # Can be safely removed in a rails3 api-only application.
-EagleReadersApi::Application.config.secret_token = '62c29e7a247dd3d775087adf9de13ef03344b70980b67b6e7fa5209d3d1970df5b62eb13d6e41c672fdcb8366173392cf63e658164c35da46121098f51fbc8dd'
 EagleReadersApi::Application.config.secret_token = ENV["SECRET_TOKEN"]
