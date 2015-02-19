@@ -588,6 +588,9 @@
         1,
         1,
         1,
+        1,
+        null,
+        null,
         null
       ],
       "/Users/Allie/Ada/capstone/eagle_readers_api/spec/controllers/genre_badges_controller_spec.rb": [
@@ -1226,6 +1229,6 @@
         null
       ]
     },
-    "timestamp": 1424383410
+    "timestamp": 1424383836
   }
 }
