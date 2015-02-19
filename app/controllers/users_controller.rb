@@ -31,7 +31,7 @@ class UsersController < ApplicationController
   end
 
   def add_book
-    UserBook.create(user_id: params[:user_id], book_id: params[:book_id])
+    UserBook.create( user_id: params[:user_id], book_id: params[:book_id] )
     user = User.find(params[:user_id])
     badges_earned = get_badges(user.id)
 
@@ -40,7 +40,7 @@ class UsersController < ApplicationController
     response = { book: book, badges: [] }
 
     badges_earned.each do |badge|
-      response[:badges] << badge.genre_badge
+      response[:badges] << badge.genre_name
     end
 
     render json: response.as_json
@@ -66,7 +66,7 @@ class UsersController < ApplicationController
         elsif user.has_genre_badge?(badge.genre_name)
           new_badge = UserGenreBadge.create(user_id: user.id, genre_badge_id: badge.id)
         end
-        new_badge ? badges_earned << new_badge : nil
+        new_badge ? badges_earned << new_badge.genre_badge : nil
       end
 
     end
