@@ -54,27 +54,6 @@ class User < ActiveRecord::Base
     end
   end
 
-    # has_badge = false
-    # genres = {}
-    #
-    # self.books.each do |book|
-    #   if genres[book.genre.name]
-    #     genres[book.genre.name] += 1
-    #   else
-    #     genres[book.genre.name] = 1
-    #   end
-    # end
-    #
-    # if genres.has_value?(5)
-    #   has_badge = true
-    # end
-    #
-    # return has_badge
-    #
-    #
-
-  # end
-
   def already_has_badge(badge_id)
     if self.genre_badges.where(id: badge_id).length != 0
       return true
