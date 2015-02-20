@@ -387,6 +387,8 @@
         1,
         null,
         1,
+        null,
+        1,
         1,
         null,
         1,
@@ -683,6 +685,36 @@
       ],
       "/Users/Allie/Ada/capstone/eagle_readers_api/app/controllers/subjects_controller.rb": [
         1,
+        1,
+        1,
+        1,
+        null,
+        null
+      ],
+      "/Users/Allie/Ada/capstone/eagle_readers_api/spec/controllers/user_books_controller_spec.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        1,
+        1,
+        1,
+        1,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "/Users/Allie/Ada/capstone/eagle_readers_api/app/controllers/user_books_controller.rb": [
+        1,
+        null,
         1,
         1,
         1,
@@ -1229,6 +1261,6 @@
         null
       ]
     },
-    "timestamp": 1424385035
+    "timestamp": 1424459391
   }
 }

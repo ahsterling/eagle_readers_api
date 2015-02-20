@@ -24,7 +24,7 @@ RSpec.describe Book, :type => :model do
   describe 'has many users' do
     it 'allows you to call book.users' do
       book = Book.create(title: "Blah")
-      user = User.create(email: 'email@email.com', password: "blahblah", password_confirmation: "blahblah", uid: "email@email.com")
+      user = User.create(email: 'email10@email.com', password: "blahblah", password_confirmation: "blahblah", uid: "email10@email.com")
       user2 = User.create(email: 'b@c.com', password: "blahblah", password_confirmation: "blahblah", uid: "b@c.com")
       UserBook.create(book_id: book.id, user_id: user.id)
       UserBook.create(book_id: book.id, user_id: user2.id)

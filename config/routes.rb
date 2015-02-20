@@ -19,6 +19,8 @@ Rails.application.routes.draw do
 
   post "/users/:user_id/books/new", to: "users#add_book"
 
+  delete "/user_books/:id", to: "user_books#destroy"
+
   get "/genres", to: "genres#index", as: "genres"
 
   get "/genre_badges", to: "genre_badges#index", as: :genre_badges
