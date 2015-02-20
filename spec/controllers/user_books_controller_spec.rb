@@ -10,7 +10,7 @@ describe UserBooksController do
 
       book = Book.create(title: "blah")
       user_book = UserBook.create(user_id: user.id, book_id: book.id)
-      delete :destroy, id: user_book.id
+      delete :destroy, { user_id: user.id, book_id: book.id }
       expect(user.books.count).to eq 0
 
     end
