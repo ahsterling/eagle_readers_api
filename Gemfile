@@ -40,7 +40,7 @@ gem 'carrierwave'
 gem 'fog'
 gem 'dotenv-rails'
 
-
+gem 'newrelic_rpm'
 # To use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
