@@ -40,7 +40,9 @@ class BooksController < ApplicationController
     elsif params['genre']
       @books = Genre.find_by("name ILIKE ?", "#{params['genre']}").books
     end
-    render json: @books.as_json
+    books = @books.to_json(:include => :genre)
+    render json: books.as_json
   end
+
 
 end
