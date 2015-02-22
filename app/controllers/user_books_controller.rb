@@ -5,12 +5,14 @@ class UserBooksController < ApplicationController
     user_book.destroy
     user = User.find(params[:user_id])
     book = Book.find(params[:book_id])
+    response = {user_book: user_book, badges_removed: []}
 
     unless user.has_genre_badge?(book.genre.name)
       genre_badge = GenreBadge.find_by(genre_name: book.genre.name)
 
       user_genre_badge = UserGenreBadge.find_by(user_id: user.id, genre_badge_id: genre_badge.id)
       if user_genre_badge
+        response[:badges_removed] << user_genre_badge
         user_genre_badge.destroy
       end
     end
@@ -19,6 +21,8 @@ class UserBooksController < ApplicationController
       genre_badge = GenreBadge.find_by(genre_name: book.genre.name, bulk_badge: true)
       user_genre_badge = UserGenreBadge.find_by(user_id: user.id, genre_badge_id: genre_badge.id)
       if user_genre_badge
+        response[:badges_removed] << user_genre_badge
+
         user_genre_badge.destroy
       end
     end
@@ -27,9 +31,12 @@ class UserBooksController < ApplicationController
       explorer_badge = GenreBadge.find_by(explorer_badge: true)
       user_genre_badge = UserGenreBadge.find_by(user_id: user.id, genre_badge_id: explorer_badge.id)
       if user_genre_badge
+        response[:badges_removed] << user_genre_badge
         user_genre_badge.destroy
       end
     end
+
+    render json: response.as_json
 
   end
 end
