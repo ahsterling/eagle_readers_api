@@ -19,10 +19,11 @@ class UserBooksController < ApplicationController
 
     unless user.has_bulk_genre_badge?(book.genre.name)
       genre_badge = GenreBadge.find_by(genre_name: book.genre.name, bulk_badge: true)
+      puts "user id: #{user.id}"
+      puts "genre_badge id: #{genre_badge.id}"
       user_genre_badge = UserGenreBadge.find_by(user_id: user.id, genre_badge_id: genre_badge.id)
       if user_genre_badge
         response[:badges_removed] << user_genre_badge
-
         user_genre_badge.destroy
       end
     end

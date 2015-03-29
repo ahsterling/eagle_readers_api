@@ -93,17 +93,15 @@ describe UserBooksController do
       user_book4 = UserBook.create(user_id: user.id, book_id: book4.id)
       user_book5 = UserBook.create(user_id: user.id, book_id: book5.id)
 
-
       genre_badge = GenreBadge.create(genre_name: "Mystery")
       genre_badge_bulk = GenreBadge.create(genre_name: "Fiction", bulk_badge: true)
       explorer_badge = GenreBadge.create(explorer_badge: true)
 
-
       UserGenreBadge.create(genre_badge_id: explorer_badge.id, user_id: user.id)
-
       expect(user.genre_badges.count).to eq 1
-      delete :destroy, {user_id: user.id, book_id: book5.id}
-      expect(user.genre_badges.count).to eq 2
+      puts "broken test"
+      delete :destroy, {user_id: user.id, book_id: book.id}
+      expect(user.genre_badges.count).to eq 0
 
     end
 
