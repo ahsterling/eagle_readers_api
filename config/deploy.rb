@@ -35,7 +35,8 @@ set :default_env, {
   'DEVISE_SECRET_KEY'=> ENV["DEVISE_SECRET_KEY"],
   'S3_KEY' => ENV["S3_KEY"],
   'S3_SECRET' => ENV['S3_SECRET'],
-  'S3_BUCKET_NAME' => ENV['S3_BUCKET_NAME']
+  'S3_BUCKET_NAME' => ENV['S3_BUCKET_NAME'],
+  'SECRET_TOKEN' => ENV["SECRET_TOKEN"]
   }
 
 # Default value for keep_releases is 5
