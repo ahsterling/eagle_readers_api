@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+gem 'dotenv-rails'
 gem 'rails', '4.2.0'
 gem 'rails-api'
 gem 'devise_token_auth'
@@ -22,6 +22,7 @@ group :development do
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
   gem "capistrano-passenger"
+  gem 'capistrano-stats'
 end
 
 gem 'therubyracer', platforms: :ruby
@@ -30,5 +31,5 @@ gem 'simplecov', :require => false, :group => :test
 gem 'mini_magick'
 gem 'carrierwave'
 gem 'fog'
-gem 'dotenv-rails'
+
 gem 'newrelic_rpm'
