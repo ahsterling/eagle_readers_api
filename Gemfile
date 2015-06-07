@@ -19,10 +19,10 @@ end
 group :development do
   gem 'capistrano'
   gem 'capistrano-rvm'
-  gem 'capistrano-bundler'
+  gem 'capistrano-bundler', :require => false
   gem 'capistrano-rails'
   gem "capistrano-passenger"
-  gem 'capistrano-stats'
+  gem 'capistrano-stats', :require => false
 end
 
 gem 'therubyracer', platforms: :ruby
