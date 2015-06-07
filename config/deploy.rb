@@ -32,7 +32,7 @@ set :repo_url, 'git@github.com:ahsterling/eagle_readers_api.git'
 
 # Default value for default_env is {}
 set :default_env, {
-  'DEVISE_SECRET_KEY'=> ENV["DEVISE_SECRET_KEY"],
+  'SECRET_KEY'=> ENV["DEVISE_SECRET_KEY"],
   'S3_KEY' => ENV["S3_KEY"],
   'S3_SECRET' => ENV['S3_SECRET'],
   'S3_BUCKET_NAME' => ENV['S3_BUCKET_NAME'],
