@@ -19,5 +19,4 @@ DeviseTokenAuth.setup do |config|
   # example, using the default '/omniauth', the github oauth2 provider will
   # redirect successful authentications to '/omniauth/github/callback'
   #config.omniauth_prefix = "/omniauth"
-  config.secret_key = ENV['DEVISE_SECRET_KEY']
 end
